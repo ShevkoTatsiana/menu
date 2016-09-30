@@ -1,0 +1,10 @@
+#IDE
+.idea/
+*.iml
+*.iws
+*.ipt
+
+#JAVAScript
+.dest
+.node_modules/
+.npm-debug.log

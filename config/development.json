@@ -1,0 +1,5 @@
+{
+  "SERVER_URL" :"api/",
+  "MINIFY": false,
+  "SOURCE_MAP": "eval-source-map"
+}

@@ -1,0 +1,59 @@
+{
+  "name": "menu",
+  "version": "1.0.0",
+  "description": "Automation system for managing cafe and restaurant service from both business and clients side",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --port=3000",
+    "prestart": "npm install",
+    "build": "rm -rf ./dest && webpack",
+    "build-production": "rm -rf ./dest && webpack --profile=production",
+    "validate": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.it-academy.by:menu-project/menu-web.git"
+  },
+  "keywords": [
+    "cafe",
+    "restaurant",
+    "menu"
+  ],
+  "author": "menu team",
+  "license": "ISC",
+  "devDependencies": {
+    "angular-mocks": "^1.5.8",
+    "autoprefixer": "^6.5.0",
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^7.0.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.14.0",
+    "css-loader": "^0.25.0",
+    "eslint": "^3.6.1",
+    "eslint-loader": "^1.5.0",
+    "exports-loader": "^0.6.3",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "imports-loader": "^0.6.5",
+    "isparta-loader": "^2.0.0",
+    "json-loader": "^0.5.4",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "ng-cache-loader": "0.0.21",
+    "null-loader": "^0.1.1",
+    "postcss-loader": "^0.13.0",
+    "request": "^2.75.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1",
+    "yargs": "^5.0.0"
+  },
+  "dependencies": {
+    "angular-ui-router": "^0.3.1",
+    "babel": "^6.5.2",
+    "babel-polyfill": "^6.13.0"
+  }
+}
