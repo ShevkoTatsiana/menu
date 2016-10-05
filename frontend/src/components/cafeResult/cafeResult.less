@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding:0;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+@m-white: #fff;
+@m-opasity: rgba( 0, 0, 0, 0.169 );
+@m-black: black;
+@m-grey: rgb( 191, 191, 191 );
+@m-darkGrey: rgb( 77, 77, 77);
+.detail {
+  display: flex;
+  font-family: sans-serif;
+}
+.logoCafe{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-right: 13px;
+}
+.timeWork {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 12px;
+  background-color: @m-opasity;
+  color: @m-white;
+
+  &:before {
+    content: "";
+    background: url("images/clock.png") no-repeat;
+    background-size: 100% 100%;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+}
+.infoCafe{
+  display: flex;
+  flex-direction: column;
+}
+.nameCafe {
+  a {
+    display: inline-block;
+    width: 100%;
+    padding-right: 20px;
+    padding-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: @m-black;
+
+    &:after {
+      content: url("images/inf.jpg");
+      vertical-align: super;
+    }
+  }
+}
+  .review{
+    padding-bottom: 10px;
+    font-size: 14px;
+    color: @m-grey;
+  }
+  .adress {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    /* font-family: "IstokWeb";*/
+    color: @m-darkGrey;
+
+    &:before {
+      content: "";
+      background: url("images/loc.png") no-repeat;
+      display: block;
+      width: 17px;
+      height: 19px;
+      margin-right: 10px;
+    }
+  }
+  .distance {
+    margin-left: 25px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 12px;
+    /* font-family: "IstokWeb";*/
+    color: @m-grey;
+  }
+  .kitchen {
+    display: flex;
+    padding-bottom: 10px;
+    align-items: center;
+    font-size: 12px;
+    /*font-family: "IstokWeb";*/
+    color: @m-darkGrey;
+
+    &:before{
+      content:"";
+      background: url("images/plate.png");
+      display: block;
+      width: 20px;
+      height: 18px;
+       margin-right: 8px;
+    }
+  }
+  .purse {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    /*font-family: "IstokWeb";*/
+    color: @m-darkGrey;
+    &:before{
+      content:"";
+      background: url("images/purse.png");
+      display: block;
+      width: 20px;
+      height: 16px;
+      margin-right: 8px;
+    }
+
+  }
+input.star { display: none; }
+div.stars {
+  display: flex;
+  justify-content: flex-end;
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+input.star:checked~ label.star{
+     &:before {
+       content: url("images/starGreen.png");
+     }
+}
+
+  label.star{
+    &:before {
+      content:  url("images/starGrey.png");
+      margin-top: 5px;
+    }
+  }
