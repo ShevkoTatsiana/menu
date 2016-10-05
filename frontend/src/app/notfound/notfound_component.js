@@ -1,11 +1,8 @@
 import template from './notfound.html';
 
-const $inject = ['$stateParams'];
-const controller = function ($stateParams) {
-    this.search = $stateParams.search;
+const controller = function () {
 };
 
-controller.$inject = $inject;
 
 export default {
     template,
