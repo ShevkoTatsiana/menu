@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'istok_webregular';
+    src: url('/components/search/font/IstokWebRegular.eot');
+    src: url('/components/search/font/IstokWebRegular.eot?#iefix') format('embedded-opentype'),
+    url('/components/search/font/IstokWebRegular.woff') format('woff'),
+    url('/components/search/font/IstokWebRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.transition(@value){
+    -webkit-transition: @value;
+    -moz-transition: @value;
+    transition: @value;
+}
+*{
+    margin:0;
+    padding:0;
+    font-size:100%;
+    font-family: 'istok_webregular';
+
+    .transition(1s);
+}
+html{
+    min-width:960px;
+}
+a:hover,
+.search:hover{
+    opacity:0.8;
+}
+.search,
+.search:hover,
+.search:focus,
+.search-btn:focus{
+    outline:0;
+}
+.flex {
+    display: -webkit-box;
+    display: -webkit-flexbox;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}

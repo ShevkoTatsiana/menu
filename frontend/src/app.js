@@ -1,4 +1,5 @@
 // Common requires.
+import './app.less';
 require('babel-polyfill');
 
 const menu = angular.module('menu', [
