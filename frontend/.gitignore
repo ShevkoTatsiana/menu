@@ -1,10 +1,10 @@
-#IDE
-.idea/
+.idea
 *.iml
 *.iws
 *.ipt
 
 #JAVAScript
-.dest
-.node_modules/
-.npm-debug.log
+dest
+node_modules
+npm-debug.log
+coverage
