@@ -1,0 +1,10 @@
+.idea
+*.iml
+*.iws
+*.ipt
+
+#JAVAScript
+frontend/dest
+frontend/node_modules
+frontend/npm-debug.log
+frontend/coverage

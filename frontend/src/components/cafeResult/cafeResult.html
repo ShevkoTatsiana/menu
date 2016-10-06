@@ -1,0 +1,21 @@
+<div class="detail">
+    <div class="logoCafe">
+        <img src={{vm.logoImg}} alt={{vm.name}}/><div class="timeWork">{{vm.timeWork}}</div>
+    </div>
+    <div class="infoCafe">
+        <div class="nameCafe"><a href={{vm.cafeLink}}>{{vm.name}}</a></div>
+        <div class="stars">
+            <form action="" class="ratingS">
+                <span ng-repeat="starNumb in vm.stars">
+                     <input class="star {{starNumb.number}}" id={{starNumb.number}} type="radio" name="star"/>
+                     <label class="star {{starNumb.number}}" for={{starNumb.number}}></label>
+                </span>
+            </form>
+        </div>
+        <div class="review">{{vm.reviewNumb}}</div>
+        <div class="adress">{{vm.address}}</div>
+        <div class="distance">{{vm.cafeDistance}}</div>
+        <div class="kitchen">{{vm.kitchen}}</div>
+        <div class="purse">{{vm.rating}}</div>
+    </div>
+</div>

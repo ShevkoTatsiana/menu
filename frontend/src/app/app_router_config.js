@@ -17,9 +17,9 @@ export default menu => {
             .otherwise('/notfound');
 
         $stateProvider
-            .state(States.NOT_FOUND, route('notfound', 'Not Found', 'notfound/:search'))
+            .state(States.NOT_FOUND, route('notfound', 'Not Found', 'notfound'))
             .state(States.MAIN, route('main', 'Main', 'main'))
-            .state(States.RESULTS, route('results', 'Results', 'results'));
+            .state(States.RESULTS, route('results', 'Results', 'results/:search'));
     };
 
     RouterConfig.$inject = $inject;

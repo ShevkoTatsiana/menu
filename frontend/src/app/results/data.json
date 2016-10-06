@@ -1,0 +1,18 @@
+[ {
+  "id" : 1,
+  "name" : "Суши WOK",
+  "address" : "пр-т Независимости, 19",
+  "type" : "Кафе",
+  "rating" : "$$",
+  "lunchMenu" : true,
+  "canReservation" : true,
+  "canTakeAway" : true,
+  "phone" : "+375-29-100-0-7",
+  "workTime" : {
+    "start" : "11.00",
+    "end" : "24.00"
+  },
+  "images" : null,
+  "category" : [ "Суши", "китайская еда" ],
+  "kitchen" : [ "Японская", "китайская" ]
+} ]

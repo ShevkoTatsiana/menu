@@ -3,7 +3,7 @@ import './search.less';
 
 const $inject = ['$state', 'States'];
 const controller = function ($state, States) {
-    this.searchFunction1 = search => {
+    this.search = search => {
         $state.go(States.RESULTS, {search});
     };
 };
