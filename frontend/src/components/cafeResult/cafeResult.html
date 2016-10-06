@@ -1,9 +1,12 @@
 <div class="detail">
     <div class="logoCafe">
-        <img src={{vm.logoImg}} alt={{vm.name}}/><div class="timeWork">{{vm.timeWork}}</div>
+        <img ng-src="{{vm.logoImg}}" alt={{vm.cafe.name}}/>
+        <div class="timeWork">{{vm.openStatus}}</div>
     </div>
     <div class="infoCafe">
-        <div class="nameCafe"><a href={{vm.cafeLink}}>{{vm.name}}</a></div>
+        <div class="nameCafe">
+            <a href="#">{{vm.cafe.name}}</a>
+        </div>
         <div class="stars">
             <form action="" class="ratingS">
                 <span ng-repeat="starNumb in vm.stars">
@@ -13,9 +16,11 @@
             </form>
         </div>
         <div class="review">{{vm.reviewNumb}}</div>
-        <div class="adress">{{vm.address}}</div>
+        <div class="adress">{{vm.cafe.address}}</div>
         <div class="distance">{{vm.cafeDistance}}</div>
-        <div class="kitchen">{{vm.kitchen}}</div>
-        <div class="purse">{{vm.rating}}</div>
+        <div class="kitchen">
+            <span ng-repeat="kitchen in vm.cafe.kitchen">{{kitchen}}</span>
+        </div>
+        <div class="purse">{{vm.cafe.rating}}</div>
     </div>
 </div>

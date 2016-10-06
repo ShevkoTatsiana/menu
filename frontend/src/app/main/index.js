@@ -1,8 +1,6 @@
 export default angular.module('main', [
     require('components/search'),
-    require('components/mainblks'),
-    require('components/headerPage'),
-    require('components/footerPage')
+    require('components/mainblks')
 ])
     .component('main', require('./main_component'))
     .name;

@@ -5,7 +5,9 @@ require('babel-polyfill');
 const menu = angular.module('menu', [
     require('angular-ui-router'),
     require('app/constants'),
-    require('app/modules')
+    require('app/modules'),
+    require('components/headerPage'),
+    require('components/footerPage')
 ]);
 
 menu.config(require('./app/app_router_config')(menu));

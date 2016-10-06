@@ -1,3 +1,4 @@
 <cafe-filter></cafe-filter>
-<cafe-result></cafe-result>
-
+<div class="results-container">
+	<cafe-result ng-repeat="restaurant in vm.restaurants" cafe="restaurant"></cafe-result>
+</div>
