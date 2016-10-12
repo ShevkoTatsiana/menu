@@ -1,16 +1,20 @@
-// Common requires.
-import './app.less';
+// Common requires
+import './styles/reset.less';
+import './styles/fonts.less';
+import './styles/app.less';
+
 require('babel-polyfill');
 
 const menu = angular.module('menu', [
     require('angular-ui-router'),
     require('app/constants'),
     require('app/modules'),
-    require('components/headerPage'),
-    require('components/footerPage')
+
+    require('components/header'),
+    require('components/footer')
 ]);
 
-menu.config(require('./app/app_router_config')(menu));
+menu.config(require('./app/app-router-config')(menu));
 
 const $inject = ['$injector', '$rootScope'];
 const run = ($injector, $rootScope) => {

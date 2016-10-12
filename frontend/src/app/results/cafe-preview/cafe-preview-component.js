@@ -1,8 +1,8 @@
-import template from './cafeResult.html';
-import './cafeResult.less';
+import template from './cafe-preview.html';
+import './cafe-preview.less';
 
 const controller = function () {
-    this.logoImg = 'components/cafeResult/images/fotoCafe.jpg';
+    this.logoImg = '';
     this.stars = ['star-5', 'star-4', 'star-3', 'star-2', 'star-1'];
     this.openStatus ='Закрыто';
     this.reviewNumb ='291 отзыв';

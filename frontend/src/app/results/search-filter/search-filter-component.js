@@ -1,5 +1,5 @@
-import template from './cafeFilter.html';
-import './cafeFilter.less';
+import template from './search-filter.html';
+import './search-filter.less';
 
 const controller = function () {
     this.kitchenFilt = [

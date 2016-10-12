@@ -1,0 +1,21 @@
+<ul>
+    <li>
+        <ul>
+            <li><h3>Сервис и поддержка</h3></li>
+            <li ng-repeat="linkInfo in vm.footerLinkServis"><a href={{linkInfo.adress}}>{{linkInfo.servis}}</a></li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li><h3>О компании</h3></li>
+            <li ng-repeat="linkAbout in vm.footerLinkAbout"><a href={{linkAbout.adress}}>{{linkAbout.infoAbout}}</a></li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li><h3>Подписаться на нас</h3></li>
+            <li><a ng-repeat="linkImage in vm.footerLinkImage" href={{linkImage.adress}}><img src={{linkImage.name1}} alt={{linkImage.alt}}/></a>
+        </ul>
+    </li>
+</ul>
+<span>© 2016. ME.NU  Все права защищены</span>

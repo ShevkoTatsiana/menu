@@ -1,5 +1,5 @@
-import template from './footerPage.html';
-import './footerPage.less';
+import template from './footer.html';
+import './footer.less';
 
 const controller = function footerLink() {
     this.footerLinkServis = [
@@ -41,17 +41,17 @@ const controller = function footerLink() {
     this.footerLinkImage = [
         {
             adress: '#',
-            name1: 'components/footerPage/images/fbPict.jpg',
+            name1: 'components/footer/img/fbPict.jpg',
             alt: 'facebook'
         },
         {
             adress: '#',
-            name1: 'components/footerPage/images/vkPict.jpg',
+            name1: 'components/footer/img/vkPict.jpg',
             alt: 'vk'
         },
         {
             adress: '#',
-            name1: 'components/footerPage/images/pPict.jpg',
+            name1: 'components/footer/img/pPict.jpg',
             alt: 'p'
         }
     ];

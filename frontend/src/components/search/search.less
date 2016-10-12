@@ -4,6 +4,15 @@
 @m-white:#fff;
 @m-light-green:rgba(210,231,105,0.46);
 
+.search:hover {
+  opacity:0.8;
+}
+.search,
+.search:hover,
+.search:focus,
+.search-btn:focus{
+  outline:0;
+}
 .brd-radius(@radius){
   -webkit-border-radius:@radius;
   -moz-border-radius: @radius;
@@ -14,7 +23,7 @@
   align-items: @property;
 }
 .ta-banner {
-  background: url(/components/search/img/home-banner.jpg) no-repeat;
+  background: url(./img/home-banner.jpg) no-repeat;
   background-size: cover;
   height: 368px;
   width: 100%;
@@ -38,7 +47,7 @@
 }
 .search-btn{
   position: absolute;
-  background: transparent url('/components/search/img/home-search.png') no-repeat center center;
+  background: transparent url('./img/home-search.png') no-repeat center center;
   width:19px;
   height:19px;
   background-size: cover;
@@ -60,7 +69,7 @@
   font-size: 18px;
   color:@m-white;
   text-decoration: none;
-  background: url('/components/search/img/wide-search-fragment.png') repeat-x center top;
+  background: url('./img/wide-search-fragment.png') repeat-x center top;
   width: 208px;
   display: block;
   float: right;

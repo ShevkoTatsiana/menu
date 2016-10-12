@@ -1,5 +1,5 @@
-import template from './mainblks.html';
-import './mainblks.less';
+import template from './popular-item.html';
+import './popular-item.less';
 
 const controller = function () {
     this.blocks = [

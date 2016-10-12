@@ -1,5 +1,5 @@
-import template from './headerPage.html';
-import './headerPage.less';
+import template from './header.html';
+import './header.less';
 
 const controller = function headerLink() {
     this.logoAdress = '#';

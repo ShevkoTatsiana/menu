@@ -9,6 +9,7 @@ const ResultsFactory = function ($http) {
         }
     };
 };
+
 ResultsFactory.$inject = $inject;
 
 export default ResultsFactory;

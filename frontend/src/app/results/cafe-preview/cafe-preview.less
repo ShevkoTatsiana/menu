@@ -13,6 +13,12 @@ a:hover {
 @m-black: black;
 @m-grey: rgb( 191, 191, 191 );
 @m-darkGrey: rgb( 77, 77, 77);
+
+cafe-preview {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
 .detail {
   display: flex;
   margin-right: 30px;
@@ -38,7 +44,7 @@ a:hover {
 
   &:before {
     content: "";
-    background: url("images/clock.png") no-repeat;
+    background: url("img/clock.png") no-repeat;
     background-size: 100% 100%;
     width: 16px;
     height: 16px;
@@ -61,7 +67,7 @@ a:hover {
     color: @m-black;
 
     &:after {
-      content: url("images/inf.jpg");
+      content: url("img/inf.jpg");
       vertical-align: super;
     }
   }
@@ -80,7 +86,7 @@ a:hover {
 
     &:before {
       content: "";
-      background: url("images/loc.png") no-repeat;
+      background: url("img/loc.png") no-repeat;
       display: block;
       width: 17px;
       height: 19px;
@@ -97,6 +103,8 @@ a:hover {
   }
   .kitchen {
     display: flex;
+    flex-wrap: wrap;
+    padding-left: 30px;
     padding-bottom: 10px;
     align-items: center;
     font-size: 12px;
@@ -105,11 +113,12 @@ a:hover {
 
     &:before{
       content:"";
-      background: url("images/plate.png");
+      background: url("img/plate.png");
       display: block;
       width: 20px;
       height: 18px;
-       margin-right: 8px;
+      margin-right: 8px;
+      margin-left: -30px;
     }
 
     span {
@@ -133,7 +142,7 @@ a:hover {
     color: @m-darkGrey;
     &:before{
       content:"";
-      background: url("images/purse.png");
+      background: url("img/purse.png");
       display: block;
       width: 20px;
       height: 16px;
@@ -151,13 +160,13 @@ div.stars {
 
 input.star:checked~ label.star{
      &:before {
-       content: url("images/starGreen.png");
+       content: url("img/star-green.png");
      }
 }
 
   label.star{
     &:before {
-      content:  url("images/starGrey.png");
+      content:  url("img/star-grey.png");
       margin-top: 5px;
     }
   }
