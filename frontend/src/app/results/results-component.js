@@ -6,13 +6,14 @@ const controller = function ($stateParams, ResultsFactory) {
     this.search = $stateParams.search;
 
     this.cafes = ResultsFactory.restaurants(this.search, 0, 10, 'name');
-        //.then(response => {
+
+        // .then(response => {
         //    console.log(response.data)
-        //}, error => {
+        // }, error => {
         //
-        //}).finally(() => {
+        // }).finally(() => {
         //
-        //});
+        // });
 };
 
 controller.$inject = $inject;

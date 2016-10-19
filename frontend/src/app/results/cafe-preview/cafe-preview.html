@@ -1,26 +1,32 @@
 <div class="detail">
     <div class="logoCafe">
         <img src="./img/photo-cafe.jpg" alt={{vm.cafe.name}}/>
-        <div class="timeWork">{{vm.openStatus}}</div>
+        <p class="timeWork">{{vm.openStatus(vm.cafe.workTime)}}</p>
     </div>
     <div class="infoCafe">
-        <div class="nameCafe">
-            <a href="#">{{vm.cafe.name}}</a>
-        </div>
+        <p class="nameCafe">
+            <a ng-click="vm.cafeInfo(vm.cafe.id)">{{vm.cafeTitle(vm.cafe.type, vm.cafe.name)}}</a>
+        </p>
         <div class="stars">
             <form action="" class="ratingS">
-                <span ng-repeat="starNumb in vm.stars">
-                     <input class="star {{starNumb.number}}" id={{starNumb.number}} type="radio" name="star"/>
-                     <label class="star {{starNumb.number}}" for={{starNumb.number}}></label>
-                </span>
+                    <input class="star star-5" id="star-5" type="radio" name="star" ng-checked="+vm.choise == 5" readonly/>
+                    <label class="star star-5" for="star-5"></label>
+                    <input class="star star-4" id="star-4" type="radio" name="star" ng-checked="+vm.choise == 4" readonly/>
+                    <label class="star star-4" for="star-4"></label>
+                    <input class="star star-3" id="star-3" type="radio" name="star" ng-checked="+vm.choise == 3" readonly/>
+                    <label class="star star-3" for="star-3"></label>
+                    <input class="star star-2" id="star-2" type="radio" name="star" ng-checked="+vm.choise == 2" readonly/>
+                    <label class="star star-2" for="star-2"></label>
+                    <input class="star star-1" id="star-1" type="radio" name="star" ng-checked="+vm.choise == 1" readonly/>
+                    <label class="star star-1" for="star-1"></label>
             </form>
         </div>
-        <div class="review">{{vm.reviewNumb}}</div>
-        <div class="adress">{{vm.cafe.address}}</div>
-        <div class="distance">{{vm.cafeDistance}}</div>
-        <div class="kitchen">
+        <p class="review">{{vm.reviewNumb}}</p>
+        <p class="adress">{{vm.cafe.address}}</p>
+        <p class="distance">{{vm.cafeDistance}}</p>
+        <p class="kitchen">
             <span ng-repeat="kitchen in vm.cafe.kitchen">{{kitchen}}</span>
-        </div>
-        <div class="purse">{{vm.cafe.rating}}</div>
+        </p>
+        <p class="purse">{{vm.cafe.rating}}</p>
     </div>
 </div>

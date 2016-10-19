@@ -24,6 +24,12 @@ const service = function ($q) {
             require.ensure([], () => resolve(module.register(require('./results'))));
         });
     };
+
+    this.info = module => {
+        return get(resolve => {
+            require.ensure([], () => resolve(module.register(require('./info'))));
+        });
+    };
 };
 
 service.$inject = $inject;

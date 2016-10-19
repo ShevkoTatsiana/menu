@@ -1,0 +1,61 @@
+<div class="popupContainer ng-hide">
+    <div class="popUp" id="popUpFilter">
+        <div class="closeLink">
+            <a href="#" ng-click="vm.Hide()"></a>
+        </div>
+        <div class="innerCont">
+            <form action="">
+                <div class="formColumn">
+                <!--    <div ng-repeat="filt in vm.filters">
+                        <p>{{filt.name}}</p>
+                        <ul><li ng-repeat="filter in filt.list">
+                            <span><input type="checkbox">{{filter}}</span>
+                        </li></ul>
+                    </div>-->
+                    <div ng-repeat="filt in vm.filtersTitle">
+                        <p>{{filt.name}}</p>
+                        <ul><li ng-repeat="filter in vm.filters[filt.value]">
+                            <span><input type="checkbox">{{filter}}</span>
+                        </li></ul>
+                    </div>
+                    <div>
+                        <p>Тип заведения</p>
+                        <span><input type="checkbox">Кафе</span>
+                        <span><input type="checkbox">Бар</span>
+                        <span><input type="checkbox">Паб</span>
+                        <span><input type="checkbox">Пиццерия</span>
+                        <span><input type="checkbox">Суши-бар</span>
+                    </div>
+                    <div>
+                        <span><input type="checkbox">Обеденное меню</span>
+                    </div>
+                    <div>
+                        <span><input type="checkbox">Бронирование столика</span>
+                    </div>
+                    <div>
+                        <span><input type="checkbox">Заказ на вынос</span>
+                    </div>
+                    <div>
+                        <span><input type="checkbox">Акции</span>
+                    </div>
+                    <div class="stars">
+                        <input class="star star-5" id="star-5" type="radio" name="star"/>
+                        <label class="star star-5" for="star-5"></label>
+                        <input class="star star-4" id="star-4" type="radio" name="star"/>
+                        <label class="star star-4" for="star-4"></label>
+                        <input class="star star-3" id="star-3" type="radio" name="star"/>
+                        <label class="star star-3" for="star-3"></label>
+                        <input class="star star-2" id="star-2" type="radio" name="star"/>
+                        <label class="star star-2" for="star-2"></label>
+                        <input class="star star-1" id="star-1" type="radio" name="star"/>
+                        <label class="star star-1" for="star-1"></label>
+                    </div>
+                    <div class="ratingName">Рейтинг</div>
+                </div>
+                <div class="popUpBut">
+                    <button>Поиск</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

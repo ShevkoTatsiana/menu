@@ -1,3 +1,6 @@
-export default angular.module('search', [])
-    .component('search', require('./search_component')).name;
-
+export default angular.module('search', [
+    require('components/search/popup-filter')
+])
+    .component('search',
+        require('./search_component')
+    ).name;

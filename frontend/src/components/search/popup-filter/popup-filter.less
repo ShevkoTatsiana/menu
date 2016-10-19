@@ -1,0 +1,114 @@
+@m-opasityFon: rgba( 0, 0, 0, 0.3 );
+@m-black: black;
+@m-white: white;
+@m-dark-green:#6a940e;
+@m-white:#fff;
+@m-light-green:rgba(210,231,105,0.46);
+
+.popupContainer {
+  position: fixed;
+  z-index:9999;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: @m-opasityFon;
+}
+.popUp {
+  position: absolute;
+  z-index:10000;
+  top: 255px;
+  left: 50%;
+  margin-left: -280px;
+  width: 560px;
+  height: 370px;
+  font-family: sans-serif;
+  font-size: 12px;
+  background-color: @m-white;
+  opacity: 1.0;
+}
+
+.closeLink {
+  display: flex;
+  justify-content: flex-end;
+  padding: 7px 7px 0px 0px;
+  a {
+    &:after{
+      content: '';
+      background: url("img/close.png");
+      display: block;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+.formColumn {
+  padding: 0 15px;
+  height: 275px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.innerCont div {
+  margin: 0 25px 15px 0;
+}
+div p {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: @m-black;
+}
+span {
+  display: flex;
+  align-items : baseline;
+  max-width: 108px;
+}
+p+span {
+  padding-top: 5px;
+}
+span input {
+  margin: 0 6px 6px 0;
+}
+
+input.star { display: none; }
+div.stars {
+  display: flex;
+  justify-content: flex-end;
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  margin-bottom:0;
+}
+
+input.star:checked~ label.star:before {
+  content: url("img/star-green.png");
+}
+
+label.star:before {
+  content:  url("img/star-grey.png");
+  margin-top: 5px;
+}
+.popUpBut {
+  display: flex;
+  justify-content: center;
+  margin: 0 20px 0 0;
+
+  button {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 45px 8px 45px;
+    clear: right;
+    color: @m-white;
+    background: url('./img/fon.png') repeat-x center top;
+    background-size: contain;
+    box-sizing: border-box;
+    border-left: 1px solid @m-dark-green;
+    border-right: 1px solid @m-dark-green;
+    -webkit-box-shadow: inset 0 1px 0 0 @m-light-green;
+    box-shadow: inset 0 1px 0 0 @m-light-green;
+    box-shadow: 0 1px 3px 0 rgb(152, 155, 157);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+}

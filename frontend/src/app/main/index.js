@@ -1,6 +1,6 @@
 export default angular.module('main', [
     require('components/search'),
-    require('components/mainblks')
+    require('components/popular-item')
 ])
-    .component('main', require('./main-component'))
+.component('main', require('./main-component'))
     .name;
