@@ -14,7 +14,7 @@
     <li>
         <ul>
             <li><h3>Подписаться на нас</h3></li>
-            <li><a ng-repeat="linkImage in vm.footerLinkImage" href={{linkImage.adress}}><img src={{linkImage.name1}} alt={{linkImage.alt}}/></a>
+            <li><a ng-repeat="linkImage in vm.footerLinkImage" ng-href={{linkImage.adress}}><img src={{linkImage.name1}} alt={{linkImage.alt}}/></a>
         </ul>
     </li>
 </ul>

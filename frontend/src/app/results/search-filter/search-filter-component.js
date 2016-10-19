@@ -1,129 +1,14 @@
 import template from './search-filter.html';
 import './search-filter.less';
 
-const controller = function () {
-    this.kitchenFilt = [
-        {
-            kitchenCheck: 'usa',
-            kitchen: 'Американская'
-        },
-        {
-            kitchenCheck: 'asia',
-            kitchen: 'Азиатксая'
-        },
-        {
-            kitchenCheck: 'arm',
-            kitchen: 'Армянская'
-        },
-        {
-            kitchenCheck: 'bel',
-            kitchen: 'Белорусская'
-        },
-        {
-            kitchenCheck: 'gr',
-            kitchen: 'Грузинская'
-        },
-        {
-            kitchenCheck: 'ind',
-            kitchen: 'Индийская'
-        },
-        {
-            kitchenCheck: 'uta',
-            kitchen: 'Итальянская'
-        },
-        {
-            kitchenCheck: 'kvz',
-            kitchen: 'Кавказская'
-        },
-        {
-            kitchenCheck: 'chi',
-            kitchen: 'Китайская'
-        },
-        {
-            kitchenCheck: 'usa',
-            kitchen: 'Американская'
-        },
-        {
-            kitchenCheck: 'rus',
-            kitchen: 'Русская'
-        },
-        {
-            kitchenCheck: 'ukr',
-            kitchen: 'Украинская'
-        },
-        {
-            kitchenCheck: 'fra',
-            kitchen: 'Французская'
-        },
-        {
-            kitchenCheck: 'jap',
-            kitchen: 'Японская'
-        },
-        {
-            kitchenCheck: 'eur',
-            kitchen: 'Европейская'
-        }
-    ];
-    this.dishFilt = [
-        {
-            dishCheck: 'pit',
-            dish: 'Пицца'
-        },
-        {
-            dishCheck: 'sush',
-            dish: 'Суши'
-        },
-        {
-            dishCheck: 'burg',
-            dish: 'Бургеры'
-        },
-        {
-            dishCheck: 'barb',
-            dish: 'Шашлыки'
-        },
-        {
-            dishCheck: 'chinFo',
-            dish: 'Китайская еда'
-        },
-        {
-            dishCheck: 'steik',
-            dish: 'Стейки'
-        },
-        {
-            dishCheck: 'pipe',
-            dish: 'Пироги'
-        },
-        {
-            dishCheck: 'veg',
-            dish: 'Вегетарианское меню'
-        },
-        {
-            dishCheck: '',
-            dish: 'Десерты'
-        },
-        {
-            dishCheck: 'sand',
-            dish: 'Сэндвичи'
-        },
-        {
-            dishCheck: 'sous',
-            dish: 'Колбаски'
-        }
-    ];
-    this.priceFilt = [
-        {
-            priceCheck: 'one',
-            price: '$'
-        },
-        {
-            priceCheck: 'two',
-            price: '$$'
-        },
-        {
-            priceCheck: 'three',
-            price: '$$$'
-        }
-    ];
+const $inject = ['PopupFactory'];
+const controller = function (PopupFactory) {
+    this.filters = PopupFactory.getFilters();
+
+    this.filtersTitle = [{value: 'Кухни', name: 'Кухня'},
+        {value: 'Блюдо', name: 'Блюда'},
+        {value: 'Класс', name: 'Класс'}];
+
     this.typeFilt = [
         {
             typeCheck: 'cafe',
@@ -169,6 +54,8 @@ const controller = function () {
         }
     ];
 };
+
+controller.$inject = $inject;
 
 export default {
     template,
