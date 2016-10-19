@@ -41,17 +41,17 @@ const controller = function footerLink() {
     this.footerLinkImage = [
         {
             adress: '#',
-            name1: 'components/footer/img/fbPict.jpg',
+            name1: './img/fbPict.jpg',
             alt: 'facebook'
         },
         {
             adress: '#',
-            name1: 'components/footer/img/vkPict.jpg',
+            name1: './img/vkPict.jpg',
             alt: 'vk'
         },
         {
             adress: '#',
-            name1: 'components/footer/img/pPict.jpg',
+            name1: './img/pPict.jpg',
             alt: 'p'
         }
     ];
