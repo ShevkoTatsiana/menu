@@ -1,5 +1,5 @@
 {
-  "SERVER_URL" :"api/",
+  "SERVER_URL" :"http://178.124.206.44/api/",
   "MINIFY": false,
   "SOURCE_MAP": "eval-source-map"
 }

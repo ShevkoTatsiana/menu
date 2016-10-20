@@ -10,7 +10,7 @@ const controller = function ($state, States) {
     this.open = function () {
        // document.getElementById('popUpFilter').style.top = document.getElementById('search-form').scrollTop;
         document.getElementById('popUpFilter').parentNode.classList.remove('ng-hide');
-    }
+    };
 };
 
 controller.$inject = $inject;

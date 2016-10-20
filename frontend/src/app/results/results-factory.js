@@ -4,8 +4,7 @@ const $inject = ['$http'];
 const ResultsFactory = function ($http) {
     return {
         restaurants(search, page, size, sort) {
-            return require('./data.json');
-            //return $http.get(Endpoints.restaurants, {params: {search, page, size, sort}})
+            return $http.get(Endpoints.restaurants, {params: {search, page, size, sort}});
         }
     };
 };

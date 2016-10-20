@@ -1,10 +1,10 @@
+import Endpoints from './../../../app/constants/Endpoints';
 const $inject = ['$http'];
 
 const PopupFactory = function ($http) {
     return {
         getFilters() {
-            return require('./data.json');
-            //return $http.get(Endpoints.restaurants, {params: {search, page, size, sort}})
+            return $http.get(Endpoints.getFilters);
         }
     };
 };

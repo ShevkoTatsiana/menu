@@ -1,3 +1,6 @@
+const serverUrl = SERVER_URL;
+
 export default {
-    restaurants: ''
+    restaurants: '',
+    getFilters: `${serverUrl}filters`
 };

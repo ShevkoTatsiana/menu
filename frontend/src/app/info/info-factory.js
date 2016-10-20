@@ -1,10 +1,10 @@
+import Endpoints from './../../app/constants/Endpoints';
 const $inject = ['$http'];
 
 const InfoFactory = function ($http) {
     return {
-        getInfo() {
-            return require('./data.json');
-            //return $http.get(Endpoints.restaurants, {params: {search, page, size, sort}})
+        getInfo(search, page, size, sort) {
+            return $http.get(Endpoints.restaurants, {params: {search, page, size, sort}});
         }
     };
 };
