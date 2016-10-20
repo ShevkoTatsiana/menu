@@ -3,7 +3,10 @@ import './popup-filter.less';
 
 const $inject = ['PopupFactory'];
 const controller = function (PopupFactory) {
-    PopupFactory.getFilters();
+    PopupFactory.getFilters()
+        .then(response => {
+            this.filters = response.data;
+        });
 
     this.filtersTitle = [{value: 'Кухни', name: 'Кухня'},
         {value: 'Блюдо', name: 'Блюда'},

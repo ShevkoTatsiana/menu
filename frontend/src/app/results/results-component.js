@@ -5,15 +5,10 @@ const $inject = ['$stateParams', 'ResultsFactory'];
 const controller = function ($stateParams, ResultsFactory) {
     this.search = $stateParams.search;
 
-    this.cafes = ResultsFactory.restaurants(this.search, 0, 10, 'name');
-
-        // .then(response => {
-        //    console.log(response.data)
-        // }, error => {
-        //
-        // }).finally(() => {
-        //
-        // });
+    ResultsFactory.restaurants(this.search, 0, 10, 'name')
+         .then(response => {
+             this.cafes = response.data;
+         });
 };
 
 controller.$inject = $inject;

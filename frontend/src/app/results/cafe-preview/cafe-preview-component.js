@@ -3,12 +3,13 @@ import './cafe-preview.less';
 
 const $inject = ['$state', 'States'];
 const controller = function ($state, States) {
-    this.logoImg = '';
-    this.choise = '3';
-    this.reviewNumb = '291 отзыв';
-    this.cafeDistance = '1,1 км';
+    this.serverUrl = 'http://178.124.206.44';
 
     this.openStatus = function (time) {
+        if (angular.isUndefined(time)) {
+            return 'Неизвестно';
+        }
+
         const start = time.start;
         const end = time.end;
         const start1 = parseFloat(start);

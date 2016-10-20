@@ -3,7 +3,10 @@ import './search-filter.less';
 
 const $inject = ['PopupFactory'];
 const controller = function (PopupFactory) {
-    this.filters = PopupFactory.getFilters();
+    PopupFactory.getFilters()
+        .then(response => {
+            this.filters = response.data;
+        });
 
     this.filtersTitle = [{value: 'Кухни', name: 'Кухня'},
         {value: 'Блюдо', name: 'Блюда'},

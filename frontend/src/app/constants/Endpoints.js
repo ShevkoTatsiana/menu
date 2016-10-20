@@ -1,6 +1,6 @@
 const serverUrl = SERVER_URL;
 
 export default {
-    restaurants: '',
+    restaurants: `${serverUrl}restaurants`,
     getFilters: `${serverUrl}filters`
 };

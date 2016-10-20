@@ -16,7 +16,7 @@
                 <p class="kitchen">
                     <span ng-repeat="kitchen in vm.cafe.kitchen">{{kitchen}}</span>
                 </p>
-                <p class="timeWork-block">{{vm.openStatus(vm.cafe.workTime)}}</p>
+                <p class="timeWork-block" ng-bind="vm.openStatus(vm.cafe.workTime)"></p>
             </div>
             <div>
                 <div class="stars">
