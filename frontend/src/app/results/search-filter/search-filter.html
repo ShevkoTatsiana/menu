@@ -1,0 +1,21 @@
+<div class="filter">
+    <div class="filterKitchen">
+        <p>Кухня</p>
+        <div ng-repeat="filt1 in vm.kitchenFilt" class="filtName"><input type="checkbox" name='kitchenCheck'>{{filt1.kitchen}}</div>
+    </div>
+    <div class="filterDish">
+        <p>Блюда</p>
+        <div ng-repeat="filt2 in vm.dishFilt" class="filtName"><input type="checkbox" name='dishCheck'>{{filt2.dish}}</div>
+    </div>
+    <div class="filterPrice">
+        <p>Класс</p>
+        <div ng-repeat="filt3 in vm.priceFilt" class="filtName"><input type="checkbox" name='priceCheck'>{{filt3.price}}</div>
+    </div>
+    <div class="filterType">
+        <p>Тип заведения</p>
+        <div ng-repeat="filt4 in vm.typeFilt" class="filtName"><input type="checkbox" name='typeCheck'>{{filt4.typePlace}}</div>
+    </div>
+    <div class="filterOther">
+        <div ng-repeat="filt5 in vm.otherFilt" class="filtName"><input type="checkbox" name='otherCheck'>{{filt5.other}}</div>
+    </div>
+</div>

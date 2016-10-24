@@ -1,0 +1,217 @@
+[ {
+  "id" : 1,
+  "name" : "Суши WOK",
+  "address" : "пр-т Независимости, 19",
+  "type" : "Кафе",
+  "rating" : "$$",
+  "lunchMenu" : true,
+  "canReservation" : true,
+  "canTakeAway" : true,
+  "phone" : "+375-29-100-0-7",
+  "workTime" : {
+    "start" : "11.00",
+    "end" : "24.00"
+  },
+  "images" : null,
+  "category" : [ "Суши", "китайская еда" ],
+  "kitchen" : [ "Японская", "китайская" ]
+},
+  {
+    "id" : 2,
+    "name" : "Белорусская кухня",
+    "address" : "ул. Немига, 17",
+    "type" : "Кафе",
+    "rating" : "$$",
+    "lunchMenu" : true,
+    "canReservation" : true,
+    "canTakeAway" : true,
+    "phone" : "+375-29-100-0-6",
+    "workTime" : {
+      "start" : "10.00",
+      "end" : "24.00"
+    },
+    "images" : null,
+    "category" : [ "Колбаски" ],
+    "kitchen" : [ "Белорусская", "русская", "украинская" ]
+  },
+  {
+    "id" : 3,
+    "name" : "Sushi",
+    "address" : "пр-т Независимости, 78",
+    "type" : "Кафе",
+    "rating" : "$$",
+    "lunchMenu" : true,
+    "canReservation" : true,
+    "canTakeAway" : true,
+    "phone" : "+375-29-100-0-4",
+    "workTime" : {
+      "start" : "10.00",
+      "end" : "24.00"
+    },
+    "images" : null,
+    "category" : [ "Суши" ],
+    "kitchen" : [ "Японская" ]
+  },
+  {
+    "id" : 4,
+    "name" : "Белорусская кухня",
+    "address" : "пр-т Независимости, 78",
+    "type" : "Кафе",
+    "rating" : "$$",
+    "lunchMenu" : false,
+    "canReservation" : true,
+    "canTakeAway" : true,
+    "phone" : "+375-29-100-0-3",
+    "workTime" : {
+      "start" : "10.00",
+      "end" : "24.00"
+    },
+    "images" : null,
+    "category" : [ "Пицца", "Десерты" ],
+    "kitchen" : [ "Европейская", "итальянская" ]
+  },
+  {
+    "id" : 5,
+    "name" : "Gondola",
+    "address" : "ул. Интернациональная, 21",
+    "type" : "Ресторан",
+    "rating" : "$$$",
+    "lunchMenu" : false,
+    "canReservation" : true,
+    "canTakeAway" : true,
+    "phone" : "+375-29-100-0-2",
+    "workTime" : {
+      "start" : "10.00",
+      "end" : "24.00"
+    },
+    "images" : null,
+    "category" : [ "Суши", "Пицца", "Стейки", "Десерты" ],
+    "kitchen" : [ "Японская", "итальянская", "европейская" ]
+  },
+  {
+    "id" : 6,
+    "name" : "Chinese",
+    "address" : "пр-т Независимости, 72",
+    "type" : "Ресторан",
+    "rating" : "$$",
+    "lunchMenu" : true,
+    "canReservation" : false,
+    "canTakeAway" : true,
+    "phone" : "+375-29-100-0-1",
+    "workTime" : {
+      "start" : "10.00",
+      "end" : "23.00"
+    },
+    "images" : null,
+    "category" : [ "Китайская еда" ],
+    "kitchen" : [ "Китайская" ]
+  },
+  {
+    "id" : 7,
+    "name" : "Аджарский дом",
+    "address" : "пр-т Независимости, 19",
+    "type" : "Кафе",
+    "rating" : "$$",
+    "lunchMenu" : false,
+    "canReservation" : true,
+    "canTakeAway" : true,
+    "phone" : null,
+    "workTime" : {
+      "start" : "12.00",
+      "end" : "23.00"
+    },
+    "images" : null,
+    "category" : null,
+    "kitchen" : [ "Грузинская" ]
+  },
+  {
+    "id" : 8,
+    "name" :"Burger week",
+    "address" : "пр-т Независимости, 19",
+    "type" : "Кафе",
+    "rating" : "$",
+    "lunchMenu" : true,
+    "canReservation" : true,
+    "canTakeAway" : true,
+    "phone" : "+375-29-100-0-0",
+    "workTime" : {
+      "start" : "12.00",
+      "end" : "02.00"
+    },
+    "images" : null,
+    "category" : [ "Бургеры", "Сэндвичи", "Десерты" ],
+    "kitchen" : [ "Американская", "Европейская" ]
+  },
+  {
+    "id" : 9,
+    "name" : "Тадж Махал",
+    "address" : "ул. Романовская слобода, 26",
+    "type" : "Ресторан",
+    "rating" : "$$$;",
+    "lunchMenu" : false,
+    "canReservation" : true,
+    "canTakeAway" : true,
+    "phone" : "+375-29-100-0-8",
+    "workTime" : {
+      "start" : "12.00",
+      "end" : "02.00"
+    },
+    "images" : null,
+    "category" : [ "Десерты" ],
+    "kitchen" : [ "Индийская", "азиатская" ]
+  },
+  {
+    "id" : 10,
+    "name" : "O'connors",
+    "address" : "пер.Войсковой, 14",
+    "type" : "Паб",
+    "rating" : "$$",
+    "lunchMenu" : true,
+    "canReservation" : true,
+    "canTakeAway" : true,
+    "phone" : "+375-29-100-0-9",
+    "workTime" : {
+      "start" : "12.00",
+      "end" : "02.00"
+    },
+    "images" : null,
+    "category" : [ "Бургеры", "стейки", "колбвски" ],
+    "kitchen" : [ "Американская", "европейская" ]
+  },
+  {
+    "id" : 11,
+    "name" : "Вкусные пироги",
+    "address" : "ул. Раковская, 23",
+    "type" : "Кафе",
+    "rating" : "$$",
+    "lunchMenu" : false,
+    "canReservation" : true,
+    "canTakeAway" : true,
+    "phone" : "+375-29-100-00-11",
+    "workTime" : {
+      "start" : "12.00",
+      "end" : "23.00"
+    },
+    "images" : null,
+    "category" : [ "Пироги", "Десерты" ],
+    "kitchen" : [ "Европейская" ]
+  },
+  {
+    "id" : 12,
+    "name" : "Union cafe",
+    "address" : "пр-т Независимости, 18",
+    "type" : "Кафе",
+    "rating" : "$$",
+    "lunchMenu" : true,
+    "canReservation" : true,
+    "canTakeAway" : true,
+    "phone" : "+375-29-100-00-12",
+    "workTime" : {
+      "start" : "12.00",
+      "end" : "24.00"
+    },
+    "images" : null,
+    "category" : [ "Стейки", "пироги", "десерты", "сэндвичи" ],
+    "kitchen" : [ "Европейская" ]
+  }
+]
