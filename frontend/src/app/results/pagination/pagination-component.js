@@ -5,12 +5,12 @@ const controller = function () {
     var pages = [];
     pages[0] = {
         number:1,
-        class:'ta-page ta-active'
+        class:'page active'
     };
     for(var i = 1; i < 3; i++){
         pages[i]={
             number:i+1,
-            class:'ta-page'
+            class:'page'
         };
     }
     this.pages = pages;

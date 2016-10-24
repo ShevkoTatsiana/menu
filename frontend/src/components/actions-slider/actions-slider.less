@@ -1,10 +1,6 @@
-@m-action-green:#889329;
-@m-white:#ffffff;
+@m-action-green: #889329;
+@m-white: #ffffff;
 .flex {
-  display: -webkit-box;
-  display: -webkit-flexbox;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .wrapper{
@@ -26,7 +22,7 @@
 #slider .slider-list {
     width: 9999px;
     height: 160px;
-    left:0;
+    left: 0;
     position: absolute;
     flex-direction: row;
     .flex;
@@ -40,38 +36,38 @@
   width: 20px;
   height: 12px;
   display: inline-block;
-  cursor:pointer;
+  cursor: pointer;
 }
 .active-btn{
-  background:url(./img/radio-buttons-sprite.png) no-repeat 0 -1px;
+  background: url(./img/radio-buttons-sprite.png) no-repeat 0 -1px;
 }
 .cover-slide-btn{
   text-align: center;
-  padding-top:15px;
+  padding: 15px 0 0 0;
 }
 .prev,
 .next{
-  background:url(./img/next-prev.png) no-repeat 3px 0;
-  width:18px;
-  height:32px;
-  float:left;
-  display:inline-flex;
-  position:relative;
+  background: url(./img/next-prev.png) no-repeat 3px 0;
+  width: 18px;
+  height: 32px;
+  float: left;
+  display: inline-flex;
+  position: relative;
   top: -93px;
   left: -20px;
 }
 .next{
-  background:url(./img/next-prev.png) no-repeat -14px 0;
-  float:right;
+  background: url(./img/next-prev.png) no-repeat -14px 0;
+  float: right;
   top: -93px;
   left: -18px;
 }
 .next:hover,
 .prev:hover,
 .slide-btn:hover{
-  opacity:0.8;
+  opacity: 0.8;
 }
-.ta-action:before{
+.action:before{
   content: '%';
   display: block;
   position: absolute;
@@ -81,7 +77,7 @@
   font-size: 29.61px;
   z-index: 1000;
 }
-.ta-action span:before{
+.action span:before{
   content: '';
   width: 0;
   height: 0;
@@ -90,6 +86,6 @@
   border-color: transparent transparent @m-action-green transparent;
   display: block;
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  bottom: 0;
+  right: 0;
 }

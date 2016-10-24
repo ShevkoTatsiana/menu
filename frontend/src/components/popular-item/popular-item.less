@@ -1,12 +1,12 @@
-@m-dack-text:#010101;
-@m-terracote:#885504;
-.ta-info-links{
-  width:995px;
+@m-dack-text: #010101;
+@m-terracote: #885504;
+.info-links{
+  width: 995px;
   flex-direction: column;
   margin: 0 auto;
   padding: 0 0 0 20px;
 }
-.ta-popular-dishes-box{
+.popular-dishes-box{
   width: 231px;
   min-width: 231px;
   height: 160px;
@@ -15,13 +15,12 @@
   text-decoration: none;
   position: relative;
   display: inline-block;
-  margin-bottom: 10px;
-  margin-right: 15px;
+  margin-bottom: 0 15px 10px 0;
   &:last-child{
     margin-right: 0;
   }
 }
-.ta-popular-dishes-box:after{
+.popular-dishes-box:after{
   content: '';
   width: 231px;
   height: 190px;
@@ -32,23 +31,23 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcab39', endColorstr='#57f8ba6c',GradientType=0 );
   background-size: cover;
 }
-.ta-cover-info-links{
+.cover-info-links{
   width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 37px 0;
   flex-direction: column;
 }
-.ta-popular-dishes-box span{
+.popular-dishes-box span{
   font-size: 16px;
   color: @m-dack-text;
   position: absolute;
   justify-content: center;
   width: 100%;
   height: 93%;
-  padding-top: 12px;
+  padding: 12px 0 0 0;
   font-weight: bold;
 }
-.ta-popular-dishes-box span:hover{
-  opacity:0.8;
+.popular-dishes-box span:hover{
+  opacity: 0.8;
 }
