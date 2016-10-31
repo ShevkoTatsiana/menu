@@ -1,5 +1,5 @@
-import template from './search-filter.html';
-import './search-filter.less';
+import template from './filter-buttons.html';
+import './filter-buttons.less';
 
 const $inject = ['PopupFactory'];
 const controller = function (PopupFactory) {
@@ -19,5 +19,3 @@ export default {
     controllerAs: 'vm',
     bindings: {}
 };
-
-

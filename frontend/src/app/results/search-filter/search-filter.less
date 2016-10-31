@@ -1,30 +1,34 @@
 @m-black: black;
-
+@m-white: #fff;
+@m-light-grey: rgb( 232, 232, 232 );
 .block-filter {
     width: 250px;
     font-size: 12px;
     line-height: 1.5;
-
    p {
-     padding: 20px 0 15px;
+     padding-top: 15px;
      font-size: 14px;
      font-weight: bold;
      color : @m-black;
    }
-  .filterKitchen p {
+   .List1 p {
      padding-top: 0;
-  }
+   }
   input {
-    margin-right: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 1px;
+    background-color: @m-light-grey;
+    -webkit-box-shadow:inset 0 2px 0 4px rgba(0,0,0,1), 0 1px 0 0 rgb( 255, 255, 255 );
+    box-shadow:inset 0 2px 0 4px rgba(0,0,0,1), 0 1px 0 0 rgb( 255, 255, 255 );
   }
-   .filterName {
-     display: flex;
-     align-items: center;
-   }
-   .filterOther {
-     margin: 30px 0;
-     div {
-       margin-bottom: 15px;
-     }
-   }
+
+  .List6 {
+    display: none;
+  }
+  .List5 {
+    margin-top: 30px;
+    p {
+      display: none;
+    }
+  }
 }

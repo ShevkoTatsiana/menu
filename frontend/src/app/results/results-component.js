@@ -8,7 +8,8 @@ const controller = function ($stateParams, ResultsFactory) {
     ResultsFactory.restaurants(this.search, 0, 10, 'name')
          .then(response => {
              this.cafes = response.data;
-         });
+             document.getElementById('preloaderContainer').classList.add('ng-hide');
+         })
 };
 
 controller.$inject = $inject;

@@ -1,23 +1,11 @@
 <div class="block-filter">
     <form action="">
-        <!--<div ng-repeat="filt in vm.filters">
-            <p>{{filt.name}}</p>
-            <ul><li ng-repeat="filter in filt.list">
-                <span><input type="checkbox">{{filter}}</span>
-            </li></ul>
-        </div>-->
-        <div ng-repeat="filt in vm.filtersTitle">
-            <p>{{filt.name}}</p>
-            <ul><li ng-repeat="filter in vm.filters[filt.value]">
-                <span><input type="checkbox">{{filter}}</span>
+        <div ng-repeat="filterSection in vm.filters.parametrses" class="{{'List' + filterSection.id}}">
+            <p>{{filterSection.filterSectionName}}</p>
+            <ul><li ng-repeat="filter in filterSection.filtersList">
+                <input id="{{'filter' + filterSection.id + filter.id}}" type="checkbox" ng-model="filter.value" ng-change="vm.searchFilter(vm.filters)"/>
+                <label for="{{'filter' + filterSection.id + filter.id}}">{{filter.filterName}}</label>
             </li></ul>
         </div>
-    <div class="filterType">
-        <p>Тип заведения</p>
-        <div ng-repeat="filt4 in vm.typeFilt" class="filterName"><input type="checkbox" name='typeCheck'>{{filt4.typePlace}}</div>
-    </div>
-    <div class="filterOther">
-        <div ng-repeat="filt5 in vm.otherFilt" class="filterName"><input type="checkbox" name='otherCheck'>{{filt5.other}}</div>
-    </div>
     </form>
 </div>

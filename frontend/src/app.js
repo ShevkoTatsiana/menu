@@ -11,7 +11,8 @@ const menu = angular.module('menu', [
     require('app/modules'),
 
     require('components/header'),
-    require('components/footer')
+    require('components/footer'),
+    require('components/preloader')
 ]);
 
 menu.config(require('./app/app-router-config')(menu));

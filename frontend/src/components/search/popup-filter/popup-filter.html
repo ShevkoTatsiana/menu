@@ -6,54 +6,29 @@
         <div class="innerCont">
             <form action="">
                 <div class="formColumn">
-                <!--    <div ng-repeat="filt in vm.filters">
-                        <p>{{filt.name}}</p>
-                        <ul><li ng-repeat="filter in filt.list">
-                            <span><input type="checkbox">{{filter}}</span>
+                    <div ng-repeat="filterSection in vm.filters.parametrses" class="{{'List' + filterSection.id}}">
+                        <p>{{filterSection.filterSectionName}}</p>
+                        <ul><li ng-repeat="filter in filterSection.filtersList">
+                            <input id="{{'filter' + filterSection.id + filter.id}}" type="checkbox" ng-model="filter.value" />
+                            <label for="{{'filter' + filterSection.id + filter.id}}">{{filter.filterName}}</label>
                         </li></ul>
-                    </div>-->
-                    <div ng-repeat="filt in vm.filtersTitle">
-                        <p>{{filt.name}}</p>
-                        <ul><li ng-repeat="filter in vm.filters[filt.value]">
-                            <span><input type="checkbox">{{filter}}</span>
-                        </li></ul>
-                    </div>
-                    <div>
-                        <p>Тип заведения</p>
-                        <span><input type="checkbox">Кафе</span>
-                        <span><input type="checkbox">Бар</span>
-                        <span><input type="checkbox">Паб</span>
-                        <span><input type="checkbox">Пиццерия</span>
-                        <span><input type="checkbox">Суши-бар</span>
-                    </div>
-                    <div>
-                        <span><input type="checkbox">Обеденное меню</span>
-                    </div>
-                    <div>
-                        <span><input type="checkbox">Бронирование столика</span>
-                    </div>
-                    <div>
-                        <span><input type="checkbox">Заказ на вынос</span>
-                    </div>
-                    <div>
-                        <span><input type="checkbox">Акции</span>
                     </div>
                     <div class="stars">
                         <input class="star star-5" id="star-5" type="radio" name="star"/>
-                        <label class="star star-5" for="star-5"></label>
+                        <label class="star star-5" for="star-5" ng-click="vm.setRating(5)"></label>
                         <input class="star star-4" id="star-4" type="radio" name="star"/>
-                        <label class="star star-4" for="star-4"></label>
+                        <label class="star star-4" for="star-4" ng-click="vm.setRating(4)"></label>
                         <input class="star star-3" id="star-3" type="radio" name="star"/>
-                        <label class="star star-3" for="star-3"></label>
+                        <label class="star star-3" for="star-3" ng-click="vm.setRating(3)"></label>
                         <input class="star star-2" id="star-2" type="radio" name="star"/>
-                        <label class="star star-2" for="star-2"></label>
+                        <label class="star star-2" for="star-2" ng-click="vm.setRating(2)"></label>
                         <input class="star star-1" id="star-1" type="radio" name="star"/>
-                        <label class="star star-1" for="star-1"></label>
+                        <label class="star star-1" for="star-1" ng-click="vm.setRating(1)"></label>
                     </div>
                     <div class="ratingName">Рейтинг</div>
                 </div>
                 <div class="popUpBut">
-                    <button>Поиск</button>
+                    <a ng-href="#" class="popUpButton greenButton" ng-click="vm.searchFilter(vm.filters)">Поиск</a>
                 </div>
             </form>
         </div>

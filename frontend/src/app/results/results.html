@@ -1,4 +1,9 @@
-<search-filter></search-filter>
-<div class="results-container">
-	<cafe-preview ng-repeat="cafe in vm.cafes" cafe="cafe"></cafe-preview>
+<div>
+     <search-filter></search-filter>
+</div>
+<div class="mainPart">
+	<filter-buttons></filter-buttons>
+    <div class="results-container">
+	    <cafe-preview ng-repeat="cafe in vm.cafes" cafe="cafe"></cafe-preview>
+    </div>
 </div>

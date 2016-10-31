@@ -41,18 +41,15 @@ const controller = function footerLink() {
     this.footerLinkImage = [
         {
             adress: '#',
-            name1: './img/fbPict.jpg',
             alt: 'facebook'
         },
         {
             adress: '#',
-            name1: './img/vkPict.jpg',
             alt: 'vk'
         },
         {
             adress: '#',
-            name1: './img/pPict.jpg',
-            alt: 'p'
+            alt: 'pa'
         }
     ];
 };
@@ -63,4 +60,3 @@ export default {
     controllerAs: 'vm',
     bindings: {}
 };
-

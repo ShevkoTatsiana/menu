@@ -3,14 +3,20 @@ import './popup-filter.less';
 
 const $inject = ['PopupFactory'];
 const controller = function (PopupFactory) {
-    PopupFactory.getFilters()
+  /*  PopupFactory.getFilters()
         .then(response => {
             this.filters = response.data;
         });
+*/
 
-    this.filtersTitle = [{value: 'Кухни', name: 'Кухня'},
-        {value: 'Блюдо', name: 'Блюда'},
-        {value: 'Класс', name: 'Класс'}];
+    this.filters = PopupFactory.getFilters();
+
+    this.setRating = function (number) {
+        angular.forEach(this.filters[5].filtersList, function (oneStar) {
+            oneStar.value = false;
+        });
+        this.filters[5].filtersList[number - 1].value = true;
+    };
     this.Hide = function () {
         document.getElementById('popUpFilter').parentNode.classList.add('ng-hide');
     };

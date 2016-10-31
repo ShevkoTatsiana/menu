@@ -1,17 +1,250 @@
-[
-  {"name":"kitchen",
-    "list":["Американская", "Азиатская", "Армянская", "Белорусская", "Грузинская", "Индийская",
-      "Итальянская", "Кавказская", "Китайская", "Русская", "Украинская", "Французская", "Японская", "Европейская"]},
-  {"name":"dishes",
-    "list":["Пицца", "Суши", "Бургеры", "Шашлыки", "Китайская еда", "Стейки", "Пироги",
-      "Вегитарианское меню", "Десерты", "Сэндвичи", "Колбаски"]},
-  {"name":"ClassOfRestaurant",
-    "list":["$", "$$", "$$$"]},
-  {"name":"type",
-    "list":["Кафе", "Бар", "Паб", "Ресторан", "Пиццерия", "Суши-бар"]},
-  {"name":null,
-    "list":"lunchMenu"},
-  {"name":null,
-    "list":"canReservation"},
-  {"name":null,
-    "list":"canTakeAway"}]
+{
+  "parametrses": [
+    {
+      "filterSectionName": "Кухня",
+      "filtersList": [
+        {
+          "filterName": "Американская",
+          "value": false,
+          "id": "1"
+        },
+        {
+          "filterName": "Азиатская",
+          "value": false,
+          "id": "2"
+        },
+        {
+          "filterName": "Армянская",
+          "value": false,
+          "id": "3"
+        },
+        {
+          "filterName": "Белорусская",
+          "value": false,
+          "id": "4"
+        },
+        {
+          "filterName": "Грузинская",
+          "value": false,
+          "id": "5"
+        },
+        {
+          "filterName": "Индийская",
+          "value": false,
+          "id": "6"
+        },
+        {
+          "filterName": "Итальянская",
+          "value": false,
+          "id": "7"
+        },
+        {
+          "filterName": "Кавказская",
+          "value": false,
+          "id": "8"
+        },
+        {
+          "filterName": "Китайская",
+          "value": false,
+          "id": "9"
+        },
+        {
+          "filterName": "Русская",
+          "value": false,
+          "id": "10"
+        },
+        {
+          "filterName": "Украинская",
+          "value": false,
+          "id": "11"
+        },
+        {
+          "filterName": "Французская",
+          "value": false,
+          "id": "12"
+        },
+        {
+          "filterName": "Японская",
+          "value": false,
+          "id": "13"
+        },
+        {
+          "filterName": "Европейская",
+          "value": false,
+          "id": "14"
+        }
+      ],
+      "id": "1"
+    },
+    {
+      "filterSectionName": "Блюдо",
+      "filtersList": [
+        {
+          "filterName": "Пицца",
+          "value": false,
+          "id": "1"
+        },
+        {
+          "filterName": "Суши",
+          "value": false,
+          "id": "2"
+        },
+        {
+          "filterName": "Шашлыки",
+          "value": false,
+          "id": "3"
+        },
+        {
+          "filterName": "Китайская еда",
+          "value": false,
+          "id": "4"
+        },
+        {
+          "filterName": "Стейки",
+          "value": false,
+          "id": "5"
+        },
+        {
+          "filterName": "Пироги",
+          "value": false,
+          "id": "6"
+        },
+        {
+          "filterName": "Вегитарианское меню",
+          "value": false,
+          "id": "7"
+        },
+        {
+          "filterName": "Десерты",
+          "value": false,
+          "id": "8"
+        },
+        {
+          "filterName": "Сэндвичи",
+          "value": false,
+          "id": "9"
+        },
+        {
+          "filterName": "Колбаски",
+          "value": false,
+          "id": "10"
+        }
+      ],
+      "id": "2"
+    },
+    {
+      "filterSectionName": "Класс",
+      "filtersList": [
+        {
+          "filterName": "$",
+          "value": false,
+          "id": "1"
+        },
+        {
+          "filterName": "$$",
+          "value": false,
+          "id": "2"
+        },
+        {
+          "filterName": "$$$",
+          "value": false,
+          "id": "3"
+        }
+      ],
+      "id": "3"
+    },
+    {
+      "filterSectionName": "Тип заведения",
+      "filtersList": [
+        {
+          "filterName": "Кафе",
+          "value": false,
+          "id": "1"
+        },
+        {
+          "filterName": "Бар",
+          "value": false,
+          "id": "2"
+        },
+        {
+          "filterName": "Паб",
+          "value": false,
+          "id": "3"
+        },
+        {
+          "filterName": "Ресторан",
+          "value": false,
+          "id": "4"
+        },
+        {
+          "filterName": "Пиццерия",
+          "value": false,
+          "id": "5"
+        },
+        {
+          "filterName": "Суши-бар",
+          "value": false,
+          "id": "6"
+        }
+      ],
+      "id": "4"
+    },
+    {
+      "filterSectionName": "Другие фильтры",
+      "filtersList": [
+        {
+          "filterName": "Обеденное меню",
+          "value": false,
+          "id": "1"
+        },
+        {
+          "filterName": "Бронирование столика",
+          "value": false,
+          "id": "2"
+        },
+        {
+          "filterName": "Заказ на вынос",
+          "value": false,
+          "id": "3"
+        },
+        {
+          "filterName": "Акции",
+          "value": false,
+          "id": "4"
+        }
+      ],
+      "id": "5"
+    },
+    {
+      "filterSectionName": "Рейтинг",
+      "filtersList": [
+        {
+          "filterName": "1",
+          "value": false,
+          "id": "1"
+        },
+        {
+          "filterName": "2",
+          "value": false,
+          "id": "2"
+        },
+        {
+          "filterName": "3",
+          "value": false,
+          "id": "3"
+        },
+        {
+          "filterName": "4",
+          "value": false,
+          "id": "4"
+        },
+        {
+          "filterName": "5",
+          "value": false,
+          "id": "5"
+        }
+      ],
+      "id": "6"
+    }
+  ]
+}
