@@ -2,19 +2,19 @@
     <li>
         <ul>
             <li><h3>Сервис и поддержка</h3></li>
-            <li ng-repeat="linkInfo in vm.footerLinkServis"><a ng-href={{linkInfo.adress}}>{{linkInfo.servis}}</a></li>
+            <li ng-repeat="linkInfo in vm.footerLinkServis"><a ng-href="linkInfo.adress">{{linkInfo.servis}}</a></li>
         </ul>
     </li>
     <li>
         <ul>
             <li><h3>О компании</h3></li>
-            <li ng-repeat="linkAbout in vm.footerLinkAbout"><a ng-href={{linkAbout.adress}}>{{linkAbout.infoAbout}}</a></li>
+            <li ng-repeat="linkAbout in vm.footerLinkAbout"><a ng-href="linkAbout.adress">{{linkAbout.infoAbout}}</a></li>
         </ul>
     </li>
     <li>
         <ul>
             <li><h3>Подписаться на нас</h3></li>
-            <li class="social"><a ng-repeat="linkImage in vm.footerLinkImage" ng-href={{linkImage.adress}} class={{linkImage.alt}}></a>
+            <li class="social"><a ng-repeat="linkImage in vm.footerLinkImage" ng-href="linkImage.adress" class="{{linkImage.alt}}"></a>
         </ul>
     </li>
 </ul>

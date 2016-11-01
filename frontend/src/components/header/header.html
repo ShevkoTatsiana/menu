@@ -1,4 +1,4 @@
-<span class="logoMENU"><a ng-href={{vm.logoAdress}}>ME.NU</a></span>
+<span class="logoMENU"><a ng-href="vm.logoAdress">ME.NU</a></span>
 <ul>
-    <li ng-repeat="linkInf in vm.headerLink"><a ng-href={{linkInf.linkAdress}} class={{linkInf.linkId}}>{{linkInf.linkText}}</a></li>
+    <li ng-repeat="linkInf in vm.headerLink"><a ng-href="linkInf.linkAdress" class="{{linkInf.linkId}}">{{linkInf.linkText}}</a></li>
 </ul>

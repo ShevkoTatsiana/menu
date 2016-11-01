@@ -7,10 +7,12 @@
 a:hover {
   text-decoration: underline;
 }
+
 p {
   margin-bottom: 0;
   font-weight: normal;
 }
+
 cafe-preview {
   width: 50%;
   margin-bottom: 20px;
@@ -21,6 +23,7 @@ cafe-preview {
   margin-right: 30px;
   font-family: sans-serif;
 }
+
 .logoCafe{
   position: relative;
   display: flex;
@@ -33,6 +36,7 @@ cafe-preview {
     height: 170px;
   }
 }
+
 .timeWork {
   position: absolute;
   bottom: 0;
@@ -55,11 +59,14 @@ cafe-preview {
     margin: 0 8px;
   }
 }
+
 .infoCafe{
   display: flex;
   flex-direction: column;
 }
+
 .nameCafe {
+
   a {
     display: inline-block;
     width: 100%;
@@ -72,7 +79,7 @@ cafe-preview {
     cursor: pointer;
 
     &:after {
-      content: url("img/inf.png");
+      content: url("img/information.png");
       padding-left: 2px;
     }
   }
@@ -84,6 +91,7 @@ cafe-preview {
     font-weight: normal;
     color: @m-grey;
   }
+
   .adress {
     display: flex;
     align-items: center;
@@ -95,13 +103,14 @@ cafe-preview {
 
     &:before {
       content: "";
-      background: url("img/loc.png") no-repeat;
+      background: url("img/location.png") no-repeat;
       display: block;
       width: 17px;
       height: 19px;
       margin-right: 10px;
     }
   }
+
   .distance {
     margin: 5px 0 5px 25px;
     font-size: 12px;
@@ -109,6 +118,7 @@ cafe-preview {
     /* font-family: "IstokWeb";*/
     color: @m-grey;
   }
+
   .kitchen {
     display: flex;
     flex-wrap: wrap;
@@ -142,6 +152,7 @@ cafe-preview {
       }
     }
   }
+
   .purse {
     display: flex;
     align-items: center;
@@ -149,6 +160,7 @@ cafe-preview {
     font-weight: normal;
     /*font-family: "IstokWeb";*/
     color: @m-darkGrey;
+
     &:before{
       content:"";
       background: url("img/purse.png");
@@ -162,7 +174,9 @@ cafe-preview {
 .ratingS {
   display: flex;
 }
+
 input.star { display: none; }
+
 div.stars {
   display: flex;
   justify-content: flex-end;
