@@ -2,6 +2,7 @@
 import './styles/reset.less';
 import './styles/fonts.less';
 import './styles/app.less';
+import './styles/variables.less';
 
 require('babel-polyfill');
 
