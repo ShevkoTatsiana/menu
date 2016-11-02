@@ -3,12 +3,12 @@ import './filter-buttons.less';
 
 const $inject = ['PopupFactory'];
 const controller = function (PopupFactory) {
- /*   PopupFactory.getFilters()
+    PopupFactory.getFilters()
         .then(response => {
             this.filters = response.data;
         });
-*/
-    this.filters = PopupFactory.getFilters();
+
+   /* this.filters = PopupFactory.getFilters();*/
 };
 
 controller.$inject = $inject;

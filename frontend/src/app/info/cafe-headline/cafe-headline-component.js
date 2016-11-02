@@ -3,6 +3,7 @@ import './cafe-headline.less';
 
 const controller = function () {
     this.logoImg = '';
+    this.serverUrl = 'http://178.124.206.44';
 
     this.openStatus = function (time) {
         const start = time.start;

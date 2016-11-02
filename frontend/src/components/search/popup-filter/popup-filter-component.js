@@ -1,15 +1,16 @@
 import template from './popup-filter.html';
 import './popup-filter.less';
 
-const $inject = ['PopupFactory'];
-const controller = function (PopupFactory) {
-  /*  PopupFactory.getFilters()
+const $inject = ['PopupFactory', '$state', 'States'];
+
+const controller = function (PopupFactory, $state, States) {
+    PopupFactory.getFilters()
         .then(response => {
             this.filters = response.data;
         });
-*/
-
-    this.filters = PopupFactory.getFilters();
+    this.searchFilter = filtr => {
+        $state.go(States.RESULTS, {filtr});
+    };
 
     this.setRating = function (number) {
         angular.forEach(this.filters[5].filtersList, function (oneStar) {
@@ -23,7 +24,6 @@ const controller = function (PopupFactory) {
 };
 
 controller.$inject = $inject;
-
 
 export default {
     template,

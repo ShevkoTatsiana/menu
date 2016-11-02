@@ -1,14 +1,15 @@
 import template from './search-filter.html';
 import './search-filter.less';
 
-const $inject = ['PopupFactory'];
-const controller = function (PopupFactory) {
- /*   PopupFactory.getFilters()
+const $inject = ['PopupFactory', '$state', 'States'];
+const controller = function (PopupFactory, $state, States) {
+    PopupFactory.getFilters()
         .then(response => {
             this.filters = response.data;
         });
-*/
-    this.filters = PopupFactory.getFilters();
+    this.searchFilter = filtr => {
+        $state.go(States.RESULTS, {filtr});
+    };
 };
 
 controller.$inject = $inject;

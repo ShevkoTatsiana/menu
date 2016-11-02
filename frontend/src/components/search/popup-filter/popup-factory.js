@@ -4,8 +4,9 @@ const $inject = ['$http'];
 const PopupFactory = function ($http) {
     return {
         getFilters() {
-        /*    return $http.get(Endpoints.getFilters);*/
-            return require('./data1.json');
+            return $http.get(Endpoints.getFilters);
+
+        /*    return require('./data1.json');*/
         }
     };
 };
