@@ -1,20 +1,15 @@
-@m-gray:rgba(0,0,0,0.36);
-@m-text-shadow:#010202;
-@m-dark-green:#6a940e;
-@m-white:#fff;
-@m-light-green:rgba(210,231,105,0.46);
-
-.search:hover {
-  opacity:0.8;
+.search:hover,
+.wide-search:hover {
+  opacity: 0.8;
 }
 .search,
 .search:hover,
 .search:focus,
-.search-btn:focus{
-  outline:0;
+.search-btn:focus {
+  outline: 0;
 }
 .brd-radius(@radius){
-  -webkit-border-radius:@radius;
+  -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
   border-radius: @radius;
 }
@@ -22,65 +17,69 @@
   justify-content: @property;
   align-items: @property;
 }
-.ta-banner {
+.banner {
   background: url(./img/home-banner.jpg) no-repeat;
   background-size: cover;
   height: 368px;
   width: 100%;
   .justify-item-content(center);
 }
-.search-form{
-  position:relative;
+.search-form {
+  position: relative;
   display: inline-block;
 }
-.search{
+.search {
   width: 474px;
   height: 32px;
-  font-size:12px;
-  display:inline-block;
+  font-size: 12px;
+  display: inline-block;
   padding: 8px 0 5px 29px;
-  border:0;
+  border: 0;
   .brd-radius(2px);
-  box-sizing:border-box;
-  -webkit-box-shadow:inset 0 2px 1px 0 @m-gray, 0 1px 0 0 @m-white;
-  box-shadow:inset 0 2px 1px 0 @m-gray, 0 1px 0 0 @m-white;
+  box-sizing: border-box;
+  box-shadow: inset 0 2px 1px 0 @m-gray, 0 1px 0 0 @m-white;
 }
-.search-btn{
+.search-btn {
   position: absolute;
   background: transparent url('./img/home-search.png') no-repeat center center;
-  width:19px;
-  height:19px;
+  width: 19px;
+  height: 19px;
   background-size: cover;
-  border:0;
+  border: 0;
   top: 8px;
   right: 11px;
   cursor: pointer;
 }
-.main-h{
+.main-h {
   font-size: 32px;
-  color:@m-white;
+  color: @m-white;
   display: block;
   text-shadow: 3px 0 4px @m-text-shadow;
   font-weight: normal;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
   text-align: center;
 }
-.wide-search{
-  font-size: 18px;
-  color:@m-white;
+.wide-search {
+  font-size: 17px;
+  color: @m-white;
+  height: 35px;
   text-decoration: none;
-  background: url('./img/wide-search-fragment.png') repeat-x center top;
+  background: -moz-linear-gradient(top,  rgba(141,171,36,1) 0%, rgba(169,212,55,1) 3%, rgba(134,195,12,1) 6%, rgba(134,195,12,1) 91%, rgba(99,143,9,1) 94%, rgba(152,155,157,0.33) 97%, rgba(152,155,157,0.11) 100%);
+  background: -webkit-linear-gradient(top,  rgba(141,171,36,1) 0%,rgba(169,212,55,1) 3%,rgba(134,195,12,1) 6%,rgba(134,195,12,1) 91%,rgba(99,143,9,1) 94%,rgba(152,155,157,0.33) 97%,rgba(152,155,157,0.11) 100%);
+  background: linear-gradient(to bottom,  rgba(141,171,36,1) 0%,rgba(169,212,55,1) 3%,rgba(134,195,12,1) 6%,rgba(134,195,12,1) 91%,rgba(99,143,9,1) 94%,rgba(152,155,157,0.33) 97%,rgba(152,155,157,0.11) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8dab24', endColorstr='#1c989b9d',GradientType=0 );
   width: 208px;
   display: block;
   float: right;
   text-align: center;
-  background-size: contain;
-  padding: 5px 0;
-  margin-left:14px;
+  background-size: cover;
+  padding: 7px 0;
+  margin: 0 0 0 14px;
   box-sizing: border-box;
-  border-left: 1px solid @m-dark-green;
-  border-right: 1px solid @m-dark-green;
-  -webkit-box-shadow:inset 0 1px 0 0 @m-light-green;
-  box-shadow:inset 0 1px 0 0 @m-light-green;
+  -webkit-box-shadow: inset 0 1px 0 0 @m-light-green;
+  box-shadow: inset 0 1px 0 0 @m-light-green;
   .brd-radius(3px);
+}
+.wide-search:hover {
+  text-decoration: none;
 }

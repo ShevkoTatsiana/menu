@@ -1,42 +1,21 @@
-@m-white: #fff;
-@m-opasity: rgba( 0, 0, 0, 0.169 );
-@m-black: black;
-@m-grey: rgb( 191, 191, 191 );
-@m-darkGrey: rgb( 77, 77, 77);
-
-a:hover {
-  text-decoration: underline;
-}
-
-p {
-  margin-bottom: 0;
-  font-weight: normal;
-}
-
 cafe-preview {
   width: 50%;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
+  display: inline-flex;
 }
 
 .detail {
   display: flex;
-  margin-right: 30px;
+  margin: 0 30px 0 0;
   font-family: sans-serif;
 }
-
 .logoCafe{
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
-  margin-right: 13px;
-
-  img {
-    width: 170px;
-    height: 170px;
-  }
+  margin: 0 13px 0 0;
 }
-
 .timeWork {
   position: absolute;
   bottom: 0;
@@ -107,18 +86,14 @@ cafe-preview {
       display: block;
       width: 17px;
       height: 19px;
-      margin-right: 10px;
+      margin: 0 10px 0 0;
     }
   }
-
   .distance {
     margin: 5px 0 5px 25px;
     font-size: 12px;
-    font-weight: normal;
-    /* font-family: "IstokWeb";*/
     color: @m-grey;
   }
-
   .kitchen {
     display: flex;
     flex-wrap: wrap;
@@ -144,7 +119,7 @@ cafe-preview {
 
       &:after {
         content: ',';
-        margin-right: 2px;
+        margin: 0 2px 0 0;
       }
 
       &:last-child:after {
@@ -167,7 +142,7 @@ cafe-preview {
       display: block;
       width: 20px;
       height: 16px;
-      margin-right: 8px;
+      margin: 0 8px 0 0;
     }
 
   }
