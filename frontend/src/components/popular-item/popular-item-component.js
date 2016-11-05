@@ -4,20 +4,20 @@ import './popular-item.less';
 const controller = function () {
     this.blocks = [
         {
-            title:"Суши",
-            img:'./img/home-sushi.jpg'
+            title: 'Суши',
+            img: './img/home-sushi.jpg'
         },
         {
-            title:"Пицца",
-            img:'./img/home-piza.jpg'
+            title: 'Пицца',
+            img: './img/home-piza.jpg'
         },
         {
-            title:"Бургеры",
-            img:'./img/home-burger.jpg'
+            title: 'Бургеры',
+            img: './img/home-burger.jpg'
         },
         {
-            title:"Стейки",
-            img:'./img/home-meat.jpg'
+            title: 'Стейки',
+            img: './img/home-meat.jpg'
         }
     ];
 };
