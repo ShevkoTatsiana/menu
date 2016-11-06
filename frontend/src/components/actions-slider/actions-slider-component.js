@@ -30,7 +30,7 @@ const controller = function () {
     }
     that.radio = btns;
     const carousel = document.getElementById('slider');
-    const list = carousel.querySelector('.slider-list');
+    const sliderList = carousel.querySelector('.slider-list');
     const oneStepWidth = 984;
 
     const removeClass = function () {
@@ -43,7 +43,7 @@ const controller = function () {
     };
     const changeClass = function () {
         removeClass();
-        const index = -parseInt(list.style.left, 10) / oneStepWidth;
+        const index = -parseInt(sliderList.style.left, 10) / oneStepWidth;
 
         btns[index] = {
             class: 'slide-btn active-btn',
@@ -54,22 +54,22 @@ const controller = function () {
     };
 
     that.slide = function (ev) {
-        list.style.left = `${ev.target.getAttribute('data-info') * (-oneStepWidth)}px`;
+        sliderList.style.left = `${ev.target.getAttribute('data-info') * (-oneStepWidth)}px`;
         changeClass();
     };
     that.next = function () {
-        const start = list.offsetLeft;
+        const start = sliderList.offsetLeft;
 
         if (start !== -(count - 1) * oneStepWidth) {
-            list.style.left = `${start - oneStepWidth}px`;
+            sliderList.style.left = `${start - oneStepWidth}px`;
         }
         changeClass();
     };
     that.prev = function () {
-        const start = list.offsetLeft;
+        const start = sliderList.offsetLeft;
 
         if (start !== 0) {
-            list.style.left = `${start + oneStepWidth}px`;
+            sliderList.style.left = `${start + oneStepWidth}px`;
         }
         changeClass();
     };
