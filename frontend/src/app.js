@@ -1,13 +1,22 @@
-// Common requires.
+// Common requires
+import './styles/reset.less';
+import './styles/fonts.less';
+import './styles/app.less';
+import './styles/variables.less';
+
 require('babel-polyfill');
 
 const menu = angular.module('menu', [
     require('angular-ui-router'),
     require('app/constants'),
-    require('app/modules')
+    require('app/modules'),
+
+    require('components/header'),
+    require('components/footer'),
+    require('components/preloader')
 ]);
 
-menu.config(require('./app/app_router_config')(menu));
+menu.config(require('./app/app-router-config')(menu));
 
 const $inject = ['$injector', '$rootScope'];
 const run = ($injector, $rootScope) => {

@@ -1,2 +1,11 @@
-<input type="text" ng-model="vm.search">
-<input type="button" ng-click="vm.searchFunction1(vm.search)">
+<section class="banner flex">
+    <div class="search-form-cover" id="search-form-cover">
+        <h1 class="main-h">Найди блюдо или ресторан по своему вкусу</h1>
+        <form action="" class="search-form" id="search-form" name="search-form" method="POST">
+            <input type="text" ng-model="vm.searchQuery" name="search" id="search" class="search" placeholder="Введите название ресторана, блюда, кухни">
+            <input type="button" name="search-btn" id="search-btn" class="search-btn" value="" ng-click="vm.search(vm.searchQuery)">
+        </form>
+        <a href="#" id="wide-search" class="wide-search">Расширенный поиск</a>
+    </div>
+</section>
+<popup-filter></popup-filter>

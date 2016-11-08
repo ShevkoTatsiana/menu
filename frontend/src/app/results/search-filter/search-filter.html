@@ -1,0 +1,11 @@
+<div class="block-filter">
+    <form action="">
+        <div ng-repeat="filterSection in vm.filters.parametrses" class="{{'List' + filterSection.id}}">
+            <p>{{filterSection.filterSectionName}}</p>
+            <ul><li ng-repeat="filter in filterSection.filtersList">
+                <input id="{{'filter' + filterSection.id + filter.id}}" type="checkbox" ng-model="filter.value" ng-change="vm.searchFilter(vm.filters)"/>
+                <label for="{{'filter' + filterSection.id + filter.id}}">{{filter.filterName}}</label>
+            </li></ul>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,33 @@
+@import url(../../../styles/variables);
+
+.flex {
+  display: flex;
+}
+.pagination,
+.p-container,
+.page,
+.gray-container {
+  .flex;
+}
+li{
+  list-style-type: none;
+}
+.p-container {
+  justify-content: space-around;
+  width: 100px;
+}
+.srt-i:hover {
+  background-color: @m-gray-1;
+}
+.srt-i {
+  padding: 0 0 0 17px;
+  cursor: pointer;
+}
+.page > a {
+  text-decoration: none;
+  color: @m-text-cl;
+  font-size: 14px;
+}
+.page.active > a {
+  text-decoration: underline;
+}

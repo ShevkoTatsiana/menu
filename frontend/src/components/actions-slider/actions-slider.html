@@ -1,0 +1,18 @@
+<section class="wrapper" id="slider">
+    <div id="slider">
+        <div class="slider-content">
+            <div class="slider-list">
+                <a href='' ng-repeat="blk in vm.blocks" class="popular-dishes-box flex action" style="background:url('{{blk.img}}')">
+                    <span class="flex" ng-bind="blk.title"></span>
+                </a>
+            </div>
+        </div>
+            <div class="navigate">
+                <a class="prev" href="" ng-click="vm.prev()"></a>
+                <a class="next" href="" ng-click="vm.next()"></a>
+            </div>
+            <div class="cover-slide-btn" ng-click="vm.slide($event)">
+                <a ng-repeat="radio in vm.radio"  data-info="{{radio.data}}" class="{{radio.class}}"></a>
+            </div>
+    </div>
+</section>

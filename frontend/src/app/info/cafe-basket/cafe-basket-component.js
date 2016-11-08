@@ -1,8 +1,8 @@
-import template from './results.html';
-import './results.less';
+import template from './cafe-basket.html';
+import './cafe-basket.less';
 
 const controller = function () {
-    this.name = 'Katy';
+    this.sum = 0;
 };
 
 export default {

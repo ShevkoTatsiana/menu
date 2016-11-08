@@ -1,0 +1,24 @@
+.preloadContainer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index:9999;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: white;
+
+  .preloader {
+    z-index:10000;
+
+    &:before {
+      content: '';
+      background: url('img/egg-gif-preloader.gif');
+      width: 400px;
+      height: 300px;
+      display: block;
+    }
+  }
+}

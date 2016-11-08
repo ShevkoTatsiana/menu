@@ -1,5 +1,6 @@
 export default {
     NOT_FOUND: 'notfound',
     MAIN: 'main',
-    RESULTS: 'results'
+    RESULTS: 'results',
+    INFO: 'info'
 };

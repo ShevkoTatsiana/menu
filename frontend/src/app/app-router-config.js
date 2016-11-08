@@ -14,12 +14,14 @@ export default menu => {
             .when('', '/')
             .when('/', '/main')
             .when('/results', '/results')
+            .when('/info', '/info')
             .otherwise('/notfound');
 
         $stateProvider
-            .state(States.NOT_FOUND, route('notfound', 'Not Found', 'notfound/:search'))
+            .state(States.NOT_FOUND, route('notfound', 'Not Found', 'notfound'))
             .state(States.MAIN, route('main', 'Main', 'main'))
-            .state(States.RESULTS, route('results', 'Results', 'results'));
+            .state(States.RESULTS, route('results', 'Results', 'results/:search'))
+            .state(States.INFO, route('info', 'Info', 'info/:cafe'));
     };
 
     RouterConfig.$inject = $inject;

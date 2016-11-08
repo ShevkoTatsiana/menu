@@ -1,0 +1,36 @@
+<div class="popupContainer ng-hide">
+    <div class="popUp" id="popUpFilter">
+        <div class="closeLink">
+            <a href="#" ng-click="vm.Hide()"></a>
+        </div>
+        <div class="innerCont">
+            <form action="">
+                <div class="formColumn">
+                    <div ng-repeat="filterSection in vm.filters.parametrses" class="{{'List' + filterSection.id}}">
+                        <p>{{filterSection.filterSectionName}}</p>
+                        <ul><li ng-repeat="filter in filterSection.filtersList">
+                            <input id="{{'filter' + filterSection.id + filter.id}}" type="checkbox" ng-model="filter.value" />
+                            <label for="{{'filter' + filterSection.id + filter.id}}">{{filter.filterName}}</label>
+                        </li></ul>
+                    </div>
+                    <div class="stars">
+                        <input class="star star-5" id="star-5" type="radio" name="star"/>
+                        <label class="star star-5" for="star-5" ng-click="vm.setRating(5)"></label>
+                        <input class="star star-4" id="star-4" type="radio" name="star"/>
+                        <label class="star star-4" for="star-4" ng-click="vm.setRating(4)"></label>
+                        <input class="star star-3" id="star-3" type="radio" name="star"/>
+                        <label class="star star-3" for="star-3" ng-click="vm.setRating(3)"></label>
+                        <input class="star star-2" id="star-2" type="radio" name="star"/>
+                        <label class="star star-2" for="star-2" ng-click="vm.setRating(2)"></label>
+                        <input class="star star-1" id="star-1" type="radio" name="star"/>
+                        <label class="star star-1" for="star-1" ng-click="vm.setRating(1)"></label>
+                    </div>
+                    <div class="ratingName">Рейтинг</div>
+                </div>
+                <div class="popUpBut">
+                    <a ng-href="#" class="popUpButton greenButton" ng-click="vm.searchFilter(vm.filters)">Поиск</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

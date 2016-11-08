@@ -1,3 +1,28 @@
-p {
-  color: red;
+@import url(../../styles/variables);
+
+results {
+  display: flex;
+  padding: 30px 20px;
+
+  .mainPart {
+    border-left: 1px solid @m-grey;
+  }
+  .results-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin-left: 15px;
+  }
+}
+.gray-container {
+  height: 35px;
+  background-color: @m-gray-1;
+  width: 1388px;
+  top: -30px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 5px;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
 }

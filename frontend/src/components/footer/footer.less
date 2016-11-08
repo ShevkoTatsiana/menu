@@ -1,0 +1,80 @@
+@import url(../../styles/variables);
+
+footer {
+  display: flex;
+  justify-content:  space-between;
+  align-items: flex-end;
+  padding: 20px 20px 35px 20px;
+  font: bold 11px/1.8 sans-serif;
+  color: @m-white;
+  background-color: @m-grey;
+
+  h3 {
+    margin: 0 0 10px 0;
+    padding: 0 0 8px 0;
+    border-bottom: 1px solid @m-white;
+  }
+
+  ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  li {
+    padding: 0 70px 0 0;
+    width: 100%;
+
+    ul {
+      display: block;
+    }
+  }
+
+  a {
+    color: @m-white ;
+  }
+
+  span {
+    font-size: 9px;
+  }
+}
+.social {
+  display: flex;
+
+  a {
+    margin-right: 10px;
+  }
+}
+.facebook {
+
+  &:before {
+    content: '';
+    background-image: url("img/facebook.png");
+    display: block;
+    width: 34px;
+    height: 34px;
+    background-size: 100%;
+  }
+}
+.vk {
+
+  &:before {
+    content: '';
+    background-image: url("img/vk.png");
+    display: block;
+    width: 34px;
+    height: 34px;
+    background-size: 100%;
+  }
+}
+.pa {
+
+  &:before {
+    content: '';
+    background-image: url("img/pinterest.png");
+    display: block;
+    width: 34px;
+    height: 34px;
+    background-size: 100%;
+  }
+}
+
