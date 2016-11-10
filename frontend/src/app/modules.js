@@ -25,6 +25,12 @@ const service = function ($q) {
         });
     };
 
+    this.dishes = module => {
+        return get(resolve => {
+            require.ensure([], () => resolve(module.register(require('./dishes'))));
+        });
+    };
+
     this.info = module => {
         return get(resolve => {
             require.ensure([], () => resolve(module.register(require('./info'))));

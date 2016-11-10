@@ -3,8 +3,8 @@
         <img ng-src="{{vm.serverUrl + vm.cafe.urlLogo}}" alt="logo-cafe"/>
     </div>
     <div class="infoCafe-block">
-        <p class="nameCafe">
-            {{vm.cafeTitle(vm.cafe.type, vm.cafe.name)}}
+        <p class="name-cafe">
+            <a id="cafe-title" ng-click="vm.cafeInfo(vm.cafe.id)">{{vm.cafeTitle(vm.cafe.type, vm.cafe.name)}}</a>
         </p>
         <div class="infoCafe-block-list">
             <div>
@@ -18,22 +18,23 @@
                 </p>
                 <p class="timeWork-block" ng-bind="vm.openStatus(vm.cafe.workTime)"></p>
             </div>
-            <div>
+            <div class="star-container">
                 <div class="stars">
                     <form action="" class="ratingS">
-                        <input class="star star-5" id="star-5" type="radio" name="star" ng-checked="+{{vm.cafe.rating}} == 5" readonly/>
+                        <input class="star star-5" id="star-5" type="radio" name="star" ng-checked="vm.starCheck(5, vm.cafe.rating)"/>
                         <label class="star star-5" for="star-5"></label>
-                        <input class="star star-4" id="star-4" type="radio" name="star" ng-checked="+{{vm.cafe.rating}} == 4" readonly/>
+                        <input class="star star-4" id="star-4" type="radio" name="star" ng-checked="vm.starCheck(4, vm.cafe.rating)"/>
                         <label class="star star-4" for="star-4"></label>
-                        <input class="star star-3" id="star-3" type="radio" name="star" ng-checked="+{{vm.cafe.rating}} == 3" readonly/>
+                        <input class="star star-3" id="star-3" type="radio" name="star" ng-checked="vm.starCheck(3, vm.cafe.rating)"/>
                         <label class="star star-3" for="star-3"></label>
-                        <input class="star star-2" id="star-2" type="radio" name="star" ng-checked="+{{vm.cafe.rating}} == 2" readonly/>
+                        <input class="star star-2" id="star-2" type="radio" name="star" ng-checked="vm.starCheck(2, vm.cafe.rating)"/>
                         <label class="star star-2" for="star-2"></label>
-                        <input class="star star-1" id="star-1" type="radio" name="star" ng-checked="+{{vm.cafe.rating}} == 1" readonly/>
+                        <input class="star star-1" id="star-1" type="radio" name="star" ng-checked="vm.starCheck(1, vm.cafe.rating)"/>
                         <label class="star star-1" for="star-1"></label>
                     </form>
                 </div>
                 <a ng-href="#" class="review">{{vm.cafe.numberOfReviews}} отзыв(а)</a>
+                <div class="cover-star"></div>
             </div>
         </div>
     </div>

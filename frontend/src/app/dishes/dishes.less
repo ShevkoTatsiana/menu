@@ -3,18 +3,18 @@
    display: flex;
   margin: 7px 20px;
   .info-container-main {
-    position: relative;
     width: 80%;
     border-right: 1px solid @m-grey;
   }
 }
-.curtain {
-  position: absolute;
-  width: 300px;
-  height: 100px;
-}
-.hide-info {
-  &:after {
-    opacity: 0;
-  }
+.name-cafe {
+    a {
+      &:hover {
+        cursor: pointer;
+      }
+      &:after {
+        content: url("img/information.png");
+        padding-left: 2px;
+      }
+    }
 }

@@ -1,11 +1,17 @@
 import template from './cafe-headline.html';
 import './cafe-headline.less';
 
-const controller = function () {
+const $inject = ['$state', 'States'];
+const controller = function ($state, States) {
     this.logoImg = '';
     this.serverUrl = 'http://178.124.206.44';
+    document.getElementById('preloaderContainer').classList.add('ng-hide');
 
     this.openStatus = function (time) {
+        if (angular.isUndefined(time)) {
+            return 'Неизвестно';
+        }
+
         const start = time.start;
         const end = time.end;
         const start1 = parseFloat(start);
@@ -23,7 +29,16 @@ const controller = function () {
     this.cafeTitle = function (type, name) {
         return `${type} ${name}`;
     };
+    this.cafeInfo = cafe => {
+        $state.go(States.INFO, {cafe});
+        document.getElementById('preloaderContainer').classList.remove('ng-hide');
+    };
+    this.starCheck = function (number, rating) {
+        return rating === number;
+    };
 };
+
+controller.$inject = $inject;
 
 export default {
     template,

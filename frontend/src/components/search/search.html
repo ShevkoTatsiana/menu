@@ -5,7 +5,7 @@
             <input type="text" ng-model="vm.searchQuery" name="search" id="search" class="search" placeholder="Введите название ресторана, блюда, кухни">
             <input type="button" name="search-btn" id="search-btn" class="search-btn" value="" ng-click="vm.search(vm.searchQuery)">
         </form>
-        <a href="#" id="wide-search" class="wide-search">Расширенный поиск</a>
+        <a href="#" id="wide-search" class="wide-search" ng-click="vm.open()">Расширенный поиск</a>
     </div>
 </section>
 <popup-filter></popup-filter>

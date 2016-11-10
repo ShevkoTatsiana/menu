@@ -6,8 +6,8 @@ const ResultsFactory = function ($http) {
         restaurants(search, page, size, sort) {
             return $http.get(Endpoints.restaurants, {params: {search, page, size, sort}});
         },
-        customRestaurantsFilter(filtr) {
-            return $http.get(Endpoints.filter, {params: {filtr}});
+        customRestaurantsFilter(filter) {
+            return $http.get(Endpoints.filter, {params: {filter}});
         }
     };
 };

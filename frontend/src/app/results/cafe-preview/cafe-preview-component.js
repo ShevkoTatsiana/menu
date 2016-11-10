@@ -28,7 +28,7 @@ const controller = function ($state, States) {
         return `${type} ${name}`;
     };
     this.cafeInfo = cafe => {
-        $state.go(States.INFO, {cafe});
+        $state.go(States.DISHES, {cafe});
         document.getElementById('preloaderContainer').classList.remove('ng-hide');
     };
 };

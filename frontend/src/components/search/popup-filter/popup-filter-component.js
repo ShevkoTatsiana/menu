@@ -8,8 +8,10 @@ const controller = function (PopupFactory, $state, States) {
         .then(response => {
             this.filters = response.data;
         });
-    this.searchFilter = filtr => {
-        $state.go(States.RESULTS, {filtr});
+    this.searchFilter = filters => {
+        const filter = angular.toJson(filters);
+
+        $state.go(States.RESULTS, {filter});
     };
 
     this.setRating = function (number) {

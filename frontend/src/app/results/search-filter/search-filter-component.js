@@ -1,14 +1,22 @@
 import template from './search-filter.html';
 import './search-filter.less';
 
-const $inject = ['PopupFactory', '$state', 'States'];
-const controller = function (PopupFactory, $state, States) {
-    PopupFactory.getFilters()
-        .then(response => {
-            this.filters = response.data;
-        });
-    this.searchFilter = filtr => {
-        $state.go(States.RESULTS, {filtr});
+const $inject = ['PopupFactory', '$state', 'States', '$stateParams'];
+const controller = function (PopupFactory, $state, States, $stateParams) {
+    this.filter = $stateParams.filter;
+
+    if (this.filter === '') {
+        PopupFactory.getFilters()
+            .then(response => {
+                this.filters = response.data;
+            });
+    } else {
+        this.filters = angular.fromJson(this.filter);
+    }
+    this.searchFilter = filters => {
+        const filter = angular.toJson(filters);
+
+        $state.go(States.RESULTS, {filter});
     };
 };
 
@@ -20,5 +28,3 @@ export default {
     controllerAs: 'vm',
     bindings: {}
 };
-
-
