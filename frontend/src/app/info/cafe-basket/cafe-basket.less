@@ -1,9 +1,6 @@
-@m-dark-green:#6a940e;
-@m-white:#fff;
-@m-light-green:rgba(210,231,105,0.46);
+@import url(../../../styles/variables);
 
-
-.cafeBasket {
+.cafe-basket {
   position: fixed;
   margin-right: 20px;
   display: flex;
@@ -11,14 +8,13 @@
   justify-content: center;
   width: 20%;
 
-  .sum {
+  .cafe-basket__sum {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
     font-weight: bold;
     padding-bottom: 10px;
-    /*font-family: "IstokWeb";*/
 
     &:before {
       content: "";
@@ -28,6 +24,11 @@
       height: 25px;
       margin-right: 80px;
     }
+
+    &:after {
+      content: "руб";
+      padding-left: 5px;
+    }
   }
 
   form {
@@ -35,7 +36,7 @@
   }
 }
 
-.buttonApp {
+.cafe-basket__button {
   margin-top: 20px;
   padding: 8px 10px 10px 10px;
   font-size: 16px;
@@ -83,9 +84,8 @@
 .grayButton {
   display: flex;
   justify-content: center;
-/*  padding: 10px 50px 8px 50px;*/
-  background-color: rgb( 239, 239, 239 );
+  background-color: @m-light-light-gray;
   font-size: 12px;
   font-weight: bold;
-  color: rgb( 161, 162, 161 );
+  color: @m-middle-gray;
 }

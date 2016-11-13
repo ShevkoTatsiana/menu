@@ -1,7 +1,4 @@
-@m-white: #fff;
-@m-black: black;
-@m-grey: rgb( 191, 191, 191 );
-@m-darkGrey: rgb( 77, 77, 77);
+@import url(../../../styles/variables);
 
 a:hover {
   text-decoration: underline;
@@ -15,15 +12,15 @@ p {
 .detail-block {
   display: flex;
   padding: 15px 12px 15px 0;
-  border-bottom: 1px solid @m-grey;
+  border-bottom: 1px solid @m-grey-1;
   font-family: sans-serif;
 }
 
 .logoCafe-block{
-  margin-right: 12px;
   width: 108px;
   height: 108px;
-  border: 1px solid @m-grey;
+  margin-right: 12px;
+  border: 1px solid @m-grey-1;
 
   img {
     width: 100%;
@@ -31,33 +28,33 @@ p {
   }
 }
 
-.infoCafe-block {
+.info-cafe-block {
   width: 84%;
 }
 
-.infoCafe-block-list {
+.info-cafe-block__list {
   display: flex;
   justify-content: space-between;
 }
 
-.infoCafe-block-list:nth-child(3) {
+.info-cafe-block__list:nth-child(3) {
   margin-left: -100px;
 }
 
-.timeWork-block {
+.time-work-block {
   display: flex;
   align-items: center;
-  font-size: 12px;
   color: @m-darkGrey;
+  font-size: 12px;
   font-weight: normal;
 
   &:before {
     content: "";
-    background: url("img/clock.png") no-repeat;
-    background-size: 100% 100%;
     width: 16px;
     height: 16px;
     margin: 0 7px 0 3px;
+    background: url("img/clock.png") no-repeat;
+    background-size: 100% 100%;
   }
 }
 
@@ -66,68 +63,64 @@ p {
   a {
     display: inline-block;
     width: 100%;
-  /*  padding: 0 20px 8px 0;*/
     margin-bottom: 0;
     vertical-align: middle;
+    color: black;
     font-size: 14px;
     font-weight: bold;
-    color: @m-black;
   }
 }
 
-.review{
-  padding-bottom: 10px;
+.review {
   margin-bottom: 0;
+  padding-bottom: 10px;
+  color: @m-grey-1;
   font-size: 14px;
   font-weight: normal;
-  color: @m-grey;
 }
 
 .adress {
   display: flex;
   align-items: center;
   margin-bottom: 0;
+  color: @m-darkGrey;
   font-size: 12px;
   font-weight: normal;
-  /* font-family: "IstokWeb";*/
-  color: @m-darkGrey;
 
   &:before {
     content: "";
-    background: url("img/location.png") no-repeat;
     display: block;
     width: 17px;
     height: 19px;
     margin: 0 4px;
+    background: url("img/location.png") no-repeat;
   }
 }
 
 .distance {
   margin: 5px 0 5px 25px;
   font-size: 12px;
+  color: @m-grey-1;
   font-weight: normal;
-  /* font-family: "IstokWeb";*/
-  color: @m-grey;
 }
 
 .kitchen {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 0 10px 30px;
-  margin-bottom: 0;
   align-items: center;
+  margin-bottom: 0;
+  padding: 0 0 10px 30px;
+  color: @m-darkGrey;
   font-size: 12px;
   font-weight: normal;
-  /*font-family: "IstokWeb";*/
-  color: @m-darkGrey;
 
   &:before{
     content:"";
-    background: url("img/plate.png");
     display: block;
     width: 20px;
     height: 18px;
     margin: 0 8px 0 -30px;
+    background: url("img/plate.png");
   }
 
   span {
@@ -147,23 +140,22 @@ p {
 .purse {
   display: flex;
   align-items: center;
+  color: @m-darkGrey;
   font-size: 12px;
   font-weight: normal;
-  /*font-family: "IstokWeb";*/
-  color: @m-darkGrey;
 
   &:before{
     content:"";
-    background: url("img/purse.png");
     display: block;
     width: 20px;
     height: 16px;
     margin-right: 5px;
+    background: url("img/purse.png");
   }
 
 }
 
-.ratingS {
+.rating-star {
   display: flex;
 }
 input.star { display: none; }
@@ -190,9 +182,9 @@ label.star:before {
 
 .cover-star {
   position: absolute;
+  z-index: 10;
   top: 0;
   width: 100%;
   height: 20px;
-  z-index: 10;
   opacity: 1;
 }

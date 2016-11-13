@@ -8,11 +8,8 @@ const controller = function ($stateParams, InfoFactory) {
     InfoFactory.getInfo(this.cafeIndex)
         .then(response => {
             this.cafe = response.data;
-            document.getElementById('preloaderContainer').classList.add('ng-hide');
+            document.getElementById('preloaderContainer').classList.remove('ng-hide');
         });
-
-    /* this.cafe = InfoFactory.getInfo();
-     document.getElementById('preloaderContainer').classList.add('ng-hide');*/
 };
 
 controller.$inject = $inject;

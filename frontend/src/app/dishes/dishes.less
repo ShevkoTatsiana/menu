@@ -1,20 +1,22 @@
-@m-grey: rgb( 191, 191, 191 );
+@import url(../../styles/variables);
+
 .info-container {
-   display: flex;
+  display: flex;
   margin: 7px 20px;
-  .info-container-main {
+
+  .info-container__module {
     width: 80%;
-    border-right: 1px solid @m-grey;
+    border-right: 1px solid @m-grey-1;
   }
 }
 .name-cafe {
-    a {
-      &:hover {
-        cursor: pointer;
-      }
-      &:after {
-        content: url("img/information.png");
-        padding-left: 2px;
-      }
+  a {
+    &:hover {
+      cursor: pointer;
     }
+    &:after {
+      content: url("img/information.png");
+      padding-left: 2px;
+    }
+  }
 }
