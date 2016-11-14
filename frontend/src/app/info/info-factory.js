@@ -8,9 +8,6 @@ const InfoFactory = function ($http) {
             const adress = `${info}${id}`;
 
             return $http.get(adress);
-
-            /*    getInfo(search, page, size, sort) {
-             return $http.get(Endpoints.restaurants, {params: {search, page, size, sort}});*/
         }
     };
 };

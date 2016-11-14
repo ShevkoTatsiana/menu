@@ -7,8 +7,9 @@
         <p class="nameCafe">
             <a ng-click="vm.cafeInfo(vm.cafe.id)">{{vm.cafeTitle(vm.cafe.type, vm.cafe.name)}}</a>
         </p>
-        <div class="stars">
-            <form action="" class="ratingS">
+        <div class="star-container">
+            <div class="stars">
+                <form action="" class="ratingS">
                     <input class="star star-5" id="star-5" type="radio" name="star" ng-checked="+vm.cafe.rating == 5" readonly/>
                     <label class="star star-5" for="star-5"></label>
                     <input class="star star-4" id="star-4" type="radio" name="star" ng-checked="+vm.cafe.rating == 4" readonly/>
@@ -19,11 +20,13 @@
                     <label class="star star-2" for="star-2"></label>
                     <input class="star star-1" id="star-1" type="radio" name="star" ng-checked="+vm.cafe.rating == 1" readonly/>
                     <label class="star star-1" for="star-1"></label>
-            </form>
+                </form>
+            </div>
+            <div class="cover-star"></div>
         </div>
-        <p class="review">{{vm.cafe.numberOfReviews}}</p>
+        <p class="review">{{vm.cafe.numberOfReviews}} отзыв(а)</p>
         <p class="adress">{{vm.cafe.address}}</p>
-        <p class="distance">{{vm.cafe.distanceToUser}}</p>
+        <p class="distance">{{vm.cafe.distanceToUser}} км</p>
         <p class="kitchen">
             <span ng-repeat="kitchen in vm.cafe.kitchen">{{kitchen}}</span>
         </p>

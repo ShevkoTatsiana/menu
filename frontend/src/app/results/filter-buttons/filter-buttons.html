@@ -2,7 +2,7 @@
     <div ng-repeat="filterSection in vm.filters.parametrses" class="{{'Group' + filterSection.id}}">
         <ul><li ng-repeat="filter in filterSection.filtersList" ng-if="filter.value">
             {{filter.filterName}}
-            <span ng-click="filter.value = false"><img src="./img/delete.png" alt="delete"/></span>
+            <span ng-click="filter.value=false; vm.close(vm.filters)"><img src="./img/delete.png" alt="delete"/></span>
         </li></ul>
     </div>
 </div>

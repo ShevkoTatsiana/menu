@@ -1,5 +1,5 @@
-import template from './info.html';
-import './info.less';
+import template from './dishes.html';
+import './dishes.less';
 
 const $inject = ['$stateParams', 'InfoFactory'];
 const controller = function ($stateParams, InfoFactory) {
@@ -8,9 +8,8 @@ const controller = function ($stateParams, InfoFactory) {
     InfoFactory.getInfo(this.cafeIndex)
         .then(response => {
             this.cafe = response.data;
-            document.getElementById('preloaderContainer').classList.add('ng-hide');
+            document.getElementById('preloaderContainer').classList.remove('ng-hide');
         });
-    document.getElementById('cafe-title').classList.add('hide-info');
 };
 
 controller.$inject = $inject;
@@ -21,4 +20,3 @@ export default {
     controllerAs: 'vm',
     bindings: {}
 };
-

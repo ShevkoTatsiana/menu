@@ -4,7 +4,6 @@ export default angular.module('results', [
     require('components/search'),
     require('./filter-buttons'),
     require('./pagination')
-
 ])
     .component('results', require('./results-component'))
     .factory('ResultsFactory', require('./results-factory'))

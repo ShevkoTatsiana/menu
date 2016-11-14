@@ -10,19 +10,20 @@ export default menu => {
 
     const $inject = ['$urlRouterProvider', '$stateProvider', 'States'];
     const RouterConfig = function ($urlRouterProvider, $stateProvider, States) {
-
         // Default settings for router
         // DO NOT ADD OTHER STATES
         $urlRouterProvider
             .when('', '/')
             .when('/', '/main')
             .otherwise('/notfound');
+
         // END OF - Default settings for router
 
         $stateProvider
             .state(States.NOT_FOUND, route('notfound', 'Not Found', 'notfound'))
             .state(States.MAIN, route('main', 'Main', 'main'))
-            .state(States.RESULTS, route('results', 'Results', 'results/:search'))
+            .state(States.RESULTS, route('results', 'Results', 'results/:search/:filter'))
+            .state(States.DISHES, route('dishes', 'Dishes', 'dishes/:cafe'))
             .state(States.INFO, route('info', 'Info', 'info/:cafe'));
     };
 

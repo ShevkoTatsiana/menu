@@ -1,23 +1,20 @@
-@m-dark-green:#6a940e;
-@m-white:#fff;
-@m-light-green:rgba(210,231,105,0.46);
+@import url(../../../styles/variables);
 
-
-.cafeBasket {
+.cafe-basket {
   position: fixed;
-  padding: 5px 25px 0 5px;
+  margin-right: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 20%;
 
-  .sum {
+  .cafe-basket__sum {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
     font-weight: bold;
     padding-bottom: 10px;
-    /*font-family: "IstokWeb";*/
 
     &:before {
       content: "";
@@ -25,7 +22,12 @@
       display: block;
       width: 35px;
       height: 25px;
-      margin-right: 5px;
+      margin-right: 80px;
+    }
+
+    &:after {
+      content: "руб";
+      padding-left: 5px;
     }
   }
 
@@ -34,7 +36,8 @@
   }
 }
 
-.buttonApp {
+.cafe-basket__button {
+  margin-top: 20px;
   padding: 8px 10px 10px 10px;
   font-size: 16px;
   font-family: sans-serif;
@@ -76,4 +79,13 @@
 
 .greenButton:hover {
   text-decoration: none;
+}
+
+.grayButton {
+  display: flex;
+  justify-content: center;
+  background-color: @m-light-light-gray;
+  font-size: 12px;
+  font-weight: bold;
+  color: @m-middle-gray;
 }
