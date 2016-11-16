@@ -1,0 +1,30 @@
+<div class="dish-block">
+    <div class="dish-image">
+        <div class="dish-image__photo">
+            <!--   <img ng-src="{{vm.serverUrl + vm.dish.urlImage}}" alt="dish-image" />-->
+        </div>
+        <div class="dish-image__rating main-rating">
+            <p class="like">{{vm.dish.like}}</p>
+            <p class="dislike">{{vm.dish.dislike}}</p>
+        </div>
+    </div>
+    <div class="dish-info">
+        <p class="dish-info__title">
+            <a ng-click="vm.dishPopup(vm.dish.id)">{{vm.dish.name}}</a>
+        </p>
+        <p class="dish-info__title-popup">{{vm.dish.name}}</p>
+        <div class="dish-image__rating reserve-rating">
+            <p class="like">{{vm.dish.like}}</p>
+            <p class="dislike">{{vm.dish.dislike}}</p>
+        </div>
+        <p class="weight">{{vm.dish.weight}}</p>
+        <p class="discription">{{vm.dish.description}}</p>
+        <div class="order">
+            <label for="inputOrder" ng-click="vm.plus()">+</label>
+            <input type="text" id="inputOrder" ng-model="vm.number">
+            <label for="inputOrder" ng-click="vm.minus()">-</label>
+            <p class="order__sum">{{vm.dish.price}}</p>
+        </div>
+        <a ng-href="#" class="dish-info__button greenButton">Заказать</a>
+    </div>
+</div>

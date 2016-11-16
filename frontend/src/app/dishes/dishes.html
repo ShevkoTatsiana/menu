@@ -1,6 +1,23 @@
 <div class="info-container">
     <div class="info-container__module">
         <cafe-headline cafe="vm.cafe"></cafe-headline>
+        <div class="dish-container">
+            <dish-preview ng-repeat="dish in vm.cafe.paramsDishes" dish="dish" ng-click="vm.checkClassPopup()"></dish-preview>
+        </div>
     </div>
     <cafe-basket></cafe-basket>
+</div>
+<div class="dish-popup__container ng-hide">
+    <div class="dish-popup__block" id="carousel">
+        <a href="" class="arrow previous" ng-click="vm.previous()"></a>
+        <div class="gallery__container">
+            <div class="dish-gallery">
+                <dish-preview  ng-repeat="dish in vm.cafe.paramsDishes" dish="dish" class="dish-popup__inner"></dish-preview>
+            </div>
+        </div>
+        <a href="" class="arrow next1" ng-click="vm.next()"></a>
+        <div class="close-link">
+            <a href="" ng-click="vm.hideDish()"></a>
+        </div>
+    </div>
 </div>

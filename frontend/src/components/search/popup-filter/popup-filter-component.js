@@ -21,7 +21,7 @@ const controller = function (PopupFactory, $state, States) {
         this.filters[5].filtersList[number - 1].value = true;
     };
     this.Hide = function () {
-        document.getElementById('popUpFilter').parentNode.classList.add('ng-hide');
+        document.getElementById('popupFilter').parentNode.classList.add('ng-hide');
     };
 };
 

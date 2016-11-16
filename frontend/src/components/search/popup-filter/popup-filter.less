@@ -1,14 +1,6 @@
-@m-opasityFon: rgba( 0, 0, 0, 0.3 );
-@m-black: black;
-@m-white: white;
-@m-dark-green:#6a940e;
-@m-white:#fff;
-@m-light-green:rgba(210,231,105,0.46);
-@m-green: #86c30c;
-@m-green-top: #8dab24;
-@m-light-grey: rgb( 232, 232, 232 );
+@import url(../../../styles/variables);
 
-.popupContainer {
+.popup-container {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -20,11 +12,8 @@
   height:100%;
   background-color: @m-opasityFon;
 }
-.popUp {
-/*  position: absolute;
-  top: 255px;
-  left: 50%;
-  margin-left: -280px; */
+
+.popup {
   z-index:10000;
   width: 560px;
   height: 370px;
@@ -34,7 +23,7 @@
   opacity: 1.0;
 }
 
-.closeLink {
+.popup__close-link {
   display: flex;
   justify-content: flex-end;
   padding: 7px 7px 0 0;
@@ -48,7 +37,7 @@
     }
   }
 }
-.formColumn {
+.popup-container__form {
   padding: 0 40px;
   height: 275px;
   display: flex;
@@ -56,7 +45,7 @@
   flex-wrap: wrap;
 }
 
-.innerCont div {
+.popup-container__inner-block div {
   margin: 0 25px 15px 0;
 }
 
@@ -68,7 +57,7 @@ div p {
   color: @m-black;
 }
 
-.formColumn {
+.popup-container__form {
   li {
     display: flex;
     align-items: baseline;
@@ -76,9 +65,9 @@ div p {
     input {
       margin: 0 5px 0 0;
       border-radius: 1px;
-      background-color: @m-light-grey;
-      -webkit-box-shadow:inset 0 2px 0 4px rgba(0,0,0,1), 0 1px 0 0 rgb( 255, 255, 255 );
-      box-shadow:inset 0 2px 0 4px rgba(0,0,0,1), 0 1px 0 0 rgb( 255, 255, 255 );
+      background-color: @m-middle-light-grey;
+ /*     -webkit-box-shadow:inset 0 2px 0 4px rgba(0,0,0,1), 0 1px 0 0 rgb( 255, 255, 255 );
+      box-shadow:inset 0 2px 0 4px rgba(0,0,0,1), 0 1px 0 0 rgb( 255, 255, 255 );*/
     }
     label {
       max-width: 90px;
@@ -103,21 +92,21 @@ label.star:before {
   content:  url("img/star-grey.png");
   margin-top: 5px;
 }
-.popUpBut {
+.popup-container__button {
   display: flex;
   justify-content: center;
   margin: 0 20px 0 0;
 
-  .popUpButton {
+  .popup-button {
     font-size: 14px;
     font-family: sans-serif;
     padding: 8px 45px 10px 45px;
     clear: right;
   }
-  .greenButton {
+  .green-button {
     font-weight: bold;
     color:@m-white;
-    background-color: @m-green;
+    background-color: @m-lightGreen;
     border-top: 1px solid @m-green-top;
     border-bottom: 1px solid #638f09;
     -webkit-box-sizing: border-box;
@@ -132,13 +121,13 @@ label.star:before {
     background-image: -moz-linear-gradient(top, #8dab24 0%, #638f09 100%), -moz-linear-gradient(top, #8dab24 0%, #638f09 100%);
     background-image: -o-linear-gradient(top, #8dab24 0%, #638f09 100%), -o-linear-gradient(top, #8dab24 0%, #638f09 100%);
     background-image: linear-gradient(to bottom, #8dab24 0%, #638f09 100%), linear-gradient(to bottom, #8dab24 0%, #638f09 100%);
-    -webkit-box-shadow:inset 0 1px 0 0 @m-light-green, 0 1px 3px 0 rgb( 152, 155, 157 );
-    box-shadow:inset 0 1px 0 0 @m-light-green,0 1px 3px 0 rgb( 152, 155, 157 ) ;
+    -webkit-box-shadow:inset 0 1px 0 0 @m-light-green-1, 0 1px 3px 0 rgb( 152, 155, 157 );
+    box-shadow:inset 0 1px 0 0 @m-light-green-1,0 1px 3px 0 rgb( 152, 155, 157 ) ;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
   }
-  .greenButton:active {
+  .green-button:active {
     border-width: 0;
     background-image: -moz-linear-gradient( 90deg, rgb( 112, 146, 44 ) 0%, rgb( 173, 210, 44 ) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb( 112, 146, 44 ) 0%, rgb( 173, 210, 44 ) 100%);
@@ -146,7 +135,7 @@ label.star:before {
     box-shadow:inset 0 1px 4px 0 rgba(77,103,56,0.8), 0 1px 0 0 rgb( 244, 249, 252 );
     text-decoration: none;
   }
-  .greenButton:hover {
+  .green-button:hover {
     text-decoration: none;
   }
 }
@@ -159,3 +148,4 @@ label.star:before {
 .List5 ul li {
   padding-bottom: 15px;
 }
+
