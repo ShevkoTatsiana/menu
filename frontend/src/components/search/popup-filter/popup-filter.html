@@ -1,11 +1,11 @@
-<div class="popupContainer ng-hide">
-    <div class="popUp" id="popUpFilter">
-        <div class="closeLink">
+<div class="popup-container ng-hide">
+    <div class="popup" id="popupFilter">
+        <div class="popup__close-link">
             <a href="#" ng-click="vm.Hide()"></a>
         </div>
-        <div class="innerCont">
+        <div class="popup-container__inner-block">
             <form action="">
-                <div class="formColumn">
+                <div class="popup-container__form">
                     <div ng-repeat="filterSection in vm.filters.parametrses" class="{{'List' + filterSection.id}}">
                         <p>{{filterSection.filterSectionName}}</p>
                         <ul><li ng-repeat="filter in filterSection.filtersList">
@@ -25,10 +25,10 @@
                         <input class="star star-1" id="star-1" type="radio" name="star"/>
                         <label class="star star-1" for="star-1" ng-click="vm.setRating(1)"></label>
                     </div>
-                    <div class="ratingName">Рейтинг</div>
+                    <div class="popup-container__rating">Рейтинг</div>
                 </div>
-                <div class="popUpBut">
-                    <a ng-href="#" class="popUpButton greenButton" ng-click="vm.searchFilter(vm.filters)">Поиск</a>
+                <div class="popup-container__button">
+                    <a ng-href="#" class="popup-button green-button" ng-click="vm.searchFilter(vm.filters)">Поиск</a>
                 </div>
             </form>
         </div>

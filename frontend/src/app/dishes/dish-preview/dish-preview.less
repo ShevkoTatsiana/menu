@@ -1,0 +1,199 @@
+@import url(../../../styles/variables);
+
+dish-preview {
+  width: 50%;
+  margin: 0 0 20px 0;
+  display: inline-flex;
+}
+
+.dish-block {
+  display: flex;
+  margin: 40px 30px 0 15px;
+  width: 745px;
+  font-family: sans-serif;
+}
+
+.close-link {
+  display: none;
+}
+
+.dish-image__photo{
+ /* display: flex;*/
+  width: 170px;
+  height: 170px;
+  border: 1px solid @m-grey-1;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+}
+
+.dish-image__rating {
+   display: flex;
+   justify-content: center;
+ }
+
+.reserve-rating {
+  display: none;
+}
+
+.dish-info {
+  margin-left: 12px;
+}
+
+.dish-info__title-popup {
+  display: none;
+}
+
+.dish-image__like {
+  display: flex;
+  color: rgb( 77, 77, 77 );
+  font: 12px normal;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 14px;
+    margin: 0 15px 0 5px;
+    background: url("img/green-like.png") no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+  }
+}
+
+.dish-image__dislike {
+  display: flex;
+  color: @m-grey-1;
+  font: 12px normal;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 14px;
+    margin: 4px 0 0 5px;
+    background: url("img/gray-dislike.png") no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+  }
+}
+
+.dish-info__title {
+  cursor: pointer;
+}
+
+.dish-info__weight{
+  color: @m-grey-1;
+  font: 14px normal;
+}
+
+.dish-info__discription {
+  font: 12px normal;
+}
+
+.dish-info__order {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+#inputOrder {
+  width: 32px;
+  height: 18px;
+  border-radius: 2px;
+  text-align: right;
+  background-color: rgb( 248, 248, 248 );
+/*  -webkit-box-shadow:inset 2px 1px 0 0 rgba(0,0,0,0.36), 0 1px 0 0 rgb( 255, 255, 255 );
+  box-shadow:inset 2px 1px 0 0 rgba(0,0,0,0.36), 0 1px 0 0 rgb( 255, 255, 255 );*/
+}
+
+.dish-info__order label {
+  margin: 0 5px;
+  color: rgb( 135, 186, 33 );
+  font-size: 18px;
+
+  &:after {
+    content: 'шт';
+    margin-right: 23px;
+    margin-left: 5px;
+    color: rgb( 77, 77, 77 );
+    font-size: 14px;
+  }
+}
+
+.dish-info__order label:first-child {
+  margin-left: 0;
+
+  &:after {
+    content: '';
+    margin-right:0;
+  }
+}
+
+.dish-info__order__sum {
+  display: inline-block;
+  margin-left: 20px;
+  color: rgb( 77, 77, 77 );
+  font: 18px normal;
+
+  &:after {
+    content: 'руб';
+    margin-left: 5px;
+  }
+}
+
+.dish-info__button {
+  padding: 8px 20px 10px 20px;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.dish-popup__inner {
+
+  dish-preview {
+    margin: 0;
+  }
+  .dish-block {
+    width: inherit;
+    margin: 0;
+    padding: 18px 15px;
+    box-sizing: padding-box;
+  }
+  .dish-image__photo {
+    width: 351px;
+    height: 351px;
+  }
+
+  .reserve-rating {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .main-rating {
+    display: none;
+  }
+
+  .dish-info__title {
+    display: none;
+  }
+
+  .dish-info__title-popup {
+    display: block;
+    margin-bottom: 15px;
+    padding-top: 20px;
+  }
+
+  .dish-info__weight {
+    padding-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  .dish-info__discription {
+    margin-bottom: 40px;
+  }
+
+  .dish-info__order__sum {
+    margin-bottom: 15px;
+  }
+}

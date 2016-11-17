@@ -8,6 +8,9 @@ const InfoFactory = function ($http) {
             const adress = `${info}${id}`;
 
             return $http.get(adress);
+        },
+        getDish() {
+            return require('./data.json');
         }
     };
 };
