@@ -18,19 +18,15 @@ dish-preview {
 }
 
 .dish-image__photo{
-  display: flex;
-  width: 171px;
-  height: 171px;
+ /* display: flex;*/
+  width: 170px;
+  height: 170px;
   border: 1px solid @m-grey-1;
 
-  &:after {
-    content: '';
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background: url(img/dish.jpg);
-    background-size: 100% 100%;
-  }
+    img {
+      width: 100%;
+      height: 100%;
+    }
 }
 
 .dish-image__rating {
@@ -50,7 +46,7 @@ dish-preview {
   display: none;
 }
 
-.like {
+.dish-image__like {
   display: flex;
   color: rgb( 77, 77, 77 );
   font: 12px normal;
@@ -67,7 +63,7 @@ dish-preview {
   }
 }
 
-.dislike {
+.dish-image__dislike {
   display: flex;
   color: @m-grey-1;
   font: 12px normal;
@@ -88,16 +84,16 @@ dish-preview {
   cursor: pointer;
 }
 
-.weight{
+.dish-info__weight{
   color: @m-grey-1;
   font: 14px normal;
 }
 
-.discription {
+.dish-info__discription {
   font: 12px normal;
 }
 
-.order {
+.dish-info__order {
   display: flex;
   align-items: baseline;
   margin-bottom: 12px;
@@ -112,7 +108,7 @@ dish-preview {
   box-shadow:inset 2px 1px 0 0 rgba(0,0,0,0.36), 0 1px 0 0 rgb( 255, 255, 255 );*/
 }
 
-.order label {
+.dish-info__order label {
   margin: 0 5px;
   color: rgb( 135, 186, 33 );
   font-size: 18px;
@@ -126,7 +122,7 @@ dish-preview {
   }
 }
 
-.order label:first-child {
+.dish-info__order label:first-child {
   margin-left: 0;
 
   &:after {
@@ -135,7 +131,7 @@ dish-preview {
   }
 }
 
-.order__sum {
+.dish-info__order__sum {
   display: inline-block;
   margin-left: 20px;
   color: rgb( 77, 77, 77 );
@@ -188,16 +184,16 @@ dish-preview {
     padding-top: 20px;
   }
 
-  .weight {
+  .dish-info__weight {
     padding-top: 5px;
     margin-bottom: 20px;
   }
 
-  .discription {
+  .dish-info__discription {
     margin-bottom: 40px;
   }
 
-  .order__sum {
+  .dish-info__order__sum {
     margin-bottom: 15px;
   }
 }
