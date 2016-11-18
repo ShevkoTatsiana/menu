@@ -12,6 +12,12 @@ const controller = function ($state, States) {
         document.getElementById('popupFilter').parentNode.classList.remove('ng-hide');
     };
     document.getElementById('preloaderContainer').classList.add('ng-hide');
+    this.checkSearch = function (EO, value) {
+        if (EO.keyCode === 13) {
+            EO.preventDefault();
+            this.search(value);
+        }
+    };
 };
 
 controller.$inject = $inject;

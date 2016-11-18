@@ -21,13 +21,31 @@
   }
 }
 .dish-popup__block {
-  z-index:10000;
+  z-index: 10001;
   position: relative;
   display: flex;
   width: 625px;
   height: 390px;
   background-color: @m-white;
+  box-shadow: 2px 3.464px 10px 0 rgba(2, 3, 3, 0.11);
   opacity: 1.0;
+}
+
+.dish-popup__shaddow {
+
+  &:after {
+    content: '';
+    z-index: 10000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    width: 602px;
+    height: 41px;
+    margin: 180px 0 0 -300px;
+    background: url('img/shadow.png');
+    background-size: 100% 100%;
+  }
 }
 
 .dish-popup__inner {

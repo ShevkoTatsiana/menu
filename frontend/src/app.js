@@ -10,9 +10,8 @@ const menu = angular.module('menu', [
     require('angular-ui-router'),
     require('app/constants'),
     require('app/modules'),
-
-    require('components/header'),
-    require('components/footer'),
+    require('components/app-header'),
+    require('components/app-footer'),
     require('components/preloader')
 ]);
 
