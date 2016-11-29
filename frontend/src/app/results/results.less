@@ -1,28 +1,32 @@
 @import url(../../styles/variables);
 
 results {
+  display: -ms-flexbox;
   display: flex;
   padding: 30px 20px;
 
   .mainPart {
+    width: 75%;
     border-left: 1px solid @m-grey;
   }
+
   .results-container {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -ms-flex-order: 1;
     flex: 1;
     margin-left: 15px;
   }
 }
-.gray-container {
-  height: 35px;
-  background-color: @m-gray-1;
-  width: 1388px;
-  top: -30px;
-  position: relative;
-  box-sizing: border-box;
-  padding: 0 5px;
-  align-items: center;
-  align-content: center;
-  justify-content: space-around;
+
+.results-container__not-found {
+  margin-top: 150px;
+  margin-left: 50%;
+  padding-left: 10%;
 }
+.hide-message {
+  display: none;
+}
+

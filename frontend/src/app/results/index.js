@@ -6,5 +6,6 @@ export default angular.module('results', [
     require('./pagination')
 ])
     .component('results', require('./results-component'))
+    .service('dishService', require('../dishes/dish-service'))
     .factory('ResultsFactory', require('./results-factory'))
     .name;

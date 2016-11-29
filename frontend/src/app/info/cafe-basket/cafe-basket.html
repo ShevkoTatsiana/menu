@@ -1,4 +1,22 @@
 <div class="cafe-basket">
-    <div class="cafe-basket__sum">{{vm.sum}}</div>
-    <a ng-href="#" class="cafe-basket__button grayButton">Оформить заказ</a>
+    <div class="cafe-basket__sum">{{vm.getSum()}}</div>
+    <div class="cafe-basket__list">
+        <ul>
+            <li ng-repeat="order in vm.orderList track by $index">
+                <p class="cafe-basket__list__name">{{order.title}}</p>
+                <div>
+                    <p class="cafe-basket__list__number">
+                        <a ng-href="" ng-click="vm.minusOne($index)">-</a>
+                        <span>{{order.number}}</span>
+                        <a ng-href="" ng-click="vm.plusOne($index)">+</a>
+                    </p>
+                    <p class="cafe-basket__list__price">
+                        <span>{{order.price}}</span>
+                        <a class="cafe-basket__list__delete" ng-click="vm.deleteOne($index)"></a>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <a ng-href="" class="cafe-basket__button grayButton">Оформить заказ</a>
 </div>
