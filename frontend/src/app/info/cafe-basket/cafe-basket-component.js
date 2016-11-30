@@ -18,7 +18,7 @@ const controller = function ($rootScope, dishService) {
         }
     }
 
-    $rootScope.$on('myevent', function (event, data) {
+    const destroyMyEvent = $rootScope.$on('myevent', function (event, data) {
         that.orderList.push(data);
         that.sum = that.sum + parseInt(data.number, 10) * parseFloat(data.price);
         dishService.setOrder(that.orderList);
@@ -27,6 +27,13 @@ const controller = function ($rootScope, dishService) {
         }
     });
 
+    $rootScope.$on('$locationChangeSuccess', function (event, newUrl, oldUrl) {
+        if (/dishes/.test(newUrl) === true && /info/.test(oldUrl) === true) {
+            destroyMyEvent();
+        } else if (/dishes/.test(oldUrl) === true && /info/.test(newUrl) === true) {
+            destroyMyEvent();
+        }
+    });
     that.plusOne = function (index) {
         that.orderList[index].number = that.orderList[index].number + 1;
         that.sum = that.sum + that.orderList[index].price;
