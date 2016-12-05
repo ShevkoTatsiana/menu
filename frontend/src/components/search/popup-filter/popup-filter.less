@@ -121,6 +121,8 @@ label.star:before {
     background-color: @m-lightGreen;
     border-top: 1px solid @m-green-top;
     border-bottom: 1px solid #638f09;
+    border-right-width: 1px;
+    border-left-width: 1px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -133,8 +135,8 @@ label.star:before {
     background-image: -moz-linear-gradient(top, #8dab24 0%, #638f09 100%), -moz-linear-gradient(top, #8dab24 0%, #638f09 100%);
     background-image: -o-linear-gradient(top, #8dab24 0%, #638f09 100%), -o-linear-gradient(top, #8dab24 0%, #638f09 100%);
     background-image: linear-gradient(to bottom, #8dab24 0%, #638f09 100%), linear-gradient(to bottom, #8dab24 0%, #638f09 100%);
-    -webkit-box-shadow:inset 0 1px 0 0 @m-light-green-1, 0 1px 3px 0 rgb( 152, 155, 157 );
-    box-shadow:inset 0 1px 0 0 @m-light-green-1,0 1px 3px 0 rgb( 152, 155, 157 ) ;
+    -webkit-box-shadow:inset 0 1px 0 0 @m-light-green-1, 1px 1px 3px -1px rgb( 152, 155, 157 );
+    box-shadow:inset 0 1px 0 0 @m-light-green-1, 1px 1px 3px -1px rgb( 152, 155, 157 ) ;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -147,8 +149,8 @@ label.star:before {
     box-shadow:inset 0 1px 4px 0 rgba(77,103,56,0.8), 0 1px 0 0 rgb( 244, 249, 252 );
     text-decoration: none;
   }
-  .green-button:hover {
-    text-decoration: none;
+  .green-button:focus {
+    outline: none;
   }
 }
 .List6 {
@@ -160,4 +162,3 @@ label.star:before {
 .List5 ul li {
   padding-bottom: 15px;
 }
-
