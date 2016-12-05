@@ -10,6 +10,7 @@ p {
 }
 
 .detail-block {
+  display: -ms-flexbox;
   display: flex;
   padding: 15px 12px 15px 0;
   border-bottom: 1px solid @m-grey-1;
@@ -33,7 +34,9 @@ p {
 }
 
 .info-cafe-block__list {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -42,7 +45,9 @@ p {
 }
 
 .time-work-block {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
   align-items: center;
   color: @m-darkGrey;
   font-size: 12px;
@@ -80,7 +85,9 @@ p {
 }
 
 .adress {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 0;
   color: @m-darkGrey;
@@ -105,8 +112,11 @@ p {
 }
 
 .kitchen {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 0;
   padding: 0 0 10px 30px;
@@ -138,7 +148,9 @@ p {
 }
 
 .purse {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
   align-items: center;
   color: @m-darkGrey;
   font-size: 12px;
@@ -156,12 +168,15 @@ p {
 }
 
 .rating-star {
+  display: -ms-flexbox;
   display: flex;
 }
 input.star { display: none; }
 
 div.stars {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   unicode-bidi: bidi-override;
   direction: rtl;

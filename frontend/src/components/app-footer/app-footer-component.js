@@ -1,5 +1,5 @@
-import template from './footer.html';
-import './footer.less';
+import template from './app-footer.html';
+import './app-footer.less';
 
 const controller = function footerLink() {
     this.footerLinkServis = [

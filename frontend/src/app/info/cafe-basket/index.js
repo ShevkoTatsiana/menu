@@ -1,2 +1,4 @@
 export default angular.module('cafeBasket', [])
-    .component('cafeBasket', require('./cafe-basket-component')).name;
+    .component('cafeBasket', require('./cafe-basket-component'))
+    .service('dishService', require('../../dishes/dish-service'))
+    .name;

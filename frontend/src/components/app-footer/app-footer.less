@@ -1,9 +1,15 @@
 @import url(../../styles/variables);
 
-footer {
+app-footer {
+  display: -webkit-box;
+  display: -webkit-flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content:  space-between;
+  -ms-flex-pack: justify;
   align-items: flex-end;
+  -ms-flex-align: end;
   padding: 20px 20px 35px 20px;
   font: bold 11px/1.8 sans-serif;
   color: @m-white;
@@ -18,13 +24,17 @@ footer {
   }
 
   ul {
+    display: -webkit-box;
+    display: -webkit-flexbox;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     list-style-type: none;
   }
 
   li {
     padding: 0 70px 0 0;
-    width: 100%;
+    width: 190px;
 
     ul {
       display: block;
@@ -39,8 +49,8 @@ footer {
     font-size: 9px;
   }
 }
+
 .social {
-  display: flex;
 
   a {
     margin-right: 10px;
@@ -50,8 +60,8 @@ footer {
 
   &:before {
     content: '';
-    background-image: url("img/facebook.png");
-    display: block;
+    display: inline-block;
+    background: url("img/facebook.png") no-repeat;
     width: 34px;
     height: 34px;
     background-size: 100%;
@@ -61,8 +71,8 @@ footer {
 
   &:before {
     content: '';
-    background-image: url("img/vk.png");
-    display: block;
+    display: inline-block;
+    background: url("img/vk.png") no-repeat;
     width: 34px;
     height: 34px;
     background-size: 100%;
@@ -72,8 +82,8 @@ footer {
 
   &:before {
     content: '';
-    background-image: url("img/pinterest.png");
-    display: block;
+    display: inline-block;
+    background: url("img/pinterest.png") no-repeat;
     width: 34px;
     height: 34px;
     background-size: 100%;

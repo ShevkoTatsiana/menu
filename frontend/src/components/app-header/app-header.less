@@ -1,14 +1,24 @@
 @import url(../../styles/variables);
 
-header {
+app-header {
+  display: -webkit-box;
+  display: -webkit-flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   align-items: center;
+  -ms-flex-align: center;
   justify-content: space-between;
+  -ms-flex-pack: justify;
   padding: 0 35px 0 20px;
   border-bottom: 4px solid @m-lightGreen;
   background-color: @m-darkGreen;
 
   ul {
+    display: -webkit-box;
+    display: -webkit-flexbox;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     align-items: flex-end;
     padding: 30px 0 3px 0;
@@ -18,6 +28,10 @@ header {
     padding: 5px 10px;
     border-right: 1px solid @m-lightGreen;
     a {
+      display: -webkit-box;
+      display: -webkit-flexbox;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
       align-items: center;
       width: 100%;
@@ -31,6 +45,7 @@ header {
 
       &:before {
         content: '';
+        display: block;
         background: url('img/enter-registration.jpg') no-repeat;
         margin-right: 10px;
         width: 19px;
@@ -41,6 +56,7 @@ header {
 
       &:before {
         content: ' ';
+        display: block;
         background: url('img/android.jpg') no-repeat;
         margin-right: 10px;
         width: 16px;
@@ -51,6 +67,7 @@ header {
 
       &:before {
         content: '';
+        display: block;
         background: url('img/get-closer.jpg') no-repeat;
         margin-right: 10px;
         width: 13px;

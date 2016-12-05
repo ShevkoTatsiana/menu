@@ -1,9 +1,9 @@
 import template from './results.html';
 import './results.less';
 
-const $inject = ['$stateParams', 'ResultsFactory'];
+const $inject = ['$stateParams', 'ResultsFactory', 'dishService'];
 
-const controller = function ($stateParams, ResultsFactory) {
+const controller = function ($stateParams, ResultsFactory, dishService) {
     this.search = $stateParams.search;
     this.filter = $stateParams.filter;
 
@@ -11,6 +11,9 @@ const controller = function ($stateParams, ResultsFactory) {
         ResultsFactory.restaurants(this.search, 0, 10, 'name')
             .then(response => {
                 this.cafes = response.data;
+                if (this.cafes.length === 0) {
+                    document.getElementsByClassName('results-container__not-found')[0].classList.remove('ng-hide');
+                }
                 document.getElementById('preloaderContainer').classList.add('ng-hide');
             });
     } else {
@@ -20,6 +23,7 @@ const controller = function ($stateParams, ResultsFactory) {
                 document.getElementById('preloaderContainer').classList.add('ng-hide');
             });
     }
+    dishService.setOrder([]);
 };
 
 controller.$inject = $inject;
