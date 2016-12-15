@@ -29,7 +29,7 @@ cafe-preview {
   border: 1px solid @m-gray-1;
 }
 
-.timeWork {
+.logoCafe__timeWork {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -39,7 +39,7 @@ cafe-preview {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 0;
-  padding: 5px 0;
+  padding: 4px 0;
   font-size: 12px;
   font-weight: normal;
   background-color: @m-opasity;
@@ -150,25 +150,30 @@ cafe-preview {
     }
   }
 
-  .purse {
+  .logoCafe__purse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
     align-items: center;
+    padding: 4px 0;
     font-size: 12px;
     font-weight: normal;
     /*font-family: "IstokWeb";*/
+    background-color: @m-opasity;
     color: @m-darkGrey;
 
     &:before{
       content:"";
-      background: url("img/purse.png");
+      background: url("img/purse1.png") no-repeat;
       display: block;
       width: 20px;
       height: 16px;
-      margin: 0 8px 0 0;
+      margin: 0 4px 2px 8px;
     }
-
   }
 .ratingS {
   display: -ms-flexbox;

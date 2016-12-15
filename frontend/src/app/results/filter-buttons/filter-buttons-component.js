@@ -16,7 +16,17 @@ const controller = function (PopupFactory, $stateParams, $state, States) {
 
         $state.go(States.RESULTS, {filter});
     };
+    this.cancelFilters = function () {
+        $stateParams.filter = '';
+        $state.go(States.RESULTS);
+    };
+    this.hideCancel = function () {
+        const buttonsDiv = document.getElementsByClassName('filter-button__list')[0];
+
+        return getComputedStyle(buttonsDiv).width !== '0px';
+    };
 };
+
 
 controller.$inject = $inject;
 
