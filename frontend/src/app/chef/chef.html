@@ -1,0 +1,33 @@
+<div class="chef-container">
+    <div class="chef-block">
+        <div class="chef-block__main">
+            <p class="chef-block__title">ЗАКАЗЫ</p>
+            <ul class="chef-block__order">
+                <li ng-repeat="table in vm.orderTable" class="chef-block__order__color">
+                    <ul>
+                        <li ng-repeat="dish in table.order">
+                            <div class="chef-block__order_first-string">
+                                <p class="chef-block__order__counter">{{vm.numberDish}}</p>
+                                <p>{{table.tableNumber}}</p>
+                                <p>{{table.timeOfOrder}}</p>
+                            </div>
+                            <div class="chef-block__order__second-string">
+                                <p>{{dish.name}}</p>
+                                <div class="chef-block__order__second-string__confirmation">
+                                    <a ng-href="" class="chef-block__order__assept" ng-click="asseptOrder = !asseptOrder"></a>
+                                    <a ng-href="" class="chef-block__order__decline" ng-click="declineOrder = !declineOrder; dish.confirmDish = false"></a>
+                                    <div class="chef-block__order__assept-block" ng-show="asseptOrder"><span ng-click="declineOrderSecond = !declineOrderSecond">&#8285;</span></div>
+                                    <div class="chef-block__order__decline-block" ng-show="declineOrder"><span ng-click="asseptOrderSecond = !asseptOrderSecond">&#8285;</span></div>
+                                    <div class="chef-block__order__assept-block sidebar" ng-show="asseptOrderSecond" ng-click="declineOrder = !declineOrder; asseptOrder = !asseptOrder; asseptOrderSecond = !asseptOrderSecond; dish.confirmDish = true"></div>
+                                    <div class="chef-block__order__decline-block sidebar" ng-show="declineOrderSecond" ng-click="asseptOrder = !asseptOrder; declineOrder = !declineOrder; declineOrderSecond = !declineOrderSecond; dish.confirmDish = false"></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="chef-block__link">
+        </div>
+    </div>
+</div>

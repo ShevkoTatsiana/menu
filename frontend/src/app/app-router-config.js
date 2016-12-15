@@ -24,7 +24,8 @@ export default menu => {
             .state(States.MAIN, route('main', 'Main', 'main'))
             .state(States.RESULTS, route('results', 'Results', 'results/:search/:filter'))
             .state(States.DISHES, route('dishes', 'Dishes', 'dishes/:cafe'))
-            .state(States.INFO, route('info', 'Info', 'info/:cafe'));
+            .state(States.INFO, route('info', 'Info', 'info/:cafe'))
+            .state(States.CHEF, route('chef', 'Chef', 'chef'));
     };
 
     RouterConfig.$inject = $inject;
