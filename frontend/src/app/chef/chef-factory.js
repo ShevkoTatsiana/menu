@@ -1,9 +1,11 @@
+import Endpoints from './../constants/Endpoints';
+
 const $inject = ['$http'];
 
 const ChefFactory = function ($http) {
     return {
         getOrder() {
-            return require('./data.json');
+            return $http.get(Endpoints.order);
         }
     };
 };

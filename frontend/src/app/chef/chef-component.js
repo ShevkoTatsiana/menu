@@ -4,7 +4,10 @@ import './chef.less';
 const $inject = ['ChefFactory'];
 
 const controller = function (ChefFactory) {
-    this.orderTable = ChefFactory.getOrder();
+    ChefFactory.getOrder()
+        .then(response => {
+            this.orderTable = response.data;
+        });
     document.getElementById('preloaderContainer').classList.add('ng-hide');
 };
 

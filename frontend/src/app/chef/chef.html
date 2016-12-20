@@ -3,9 +3,9 @@
         <div class="chef-block__main">
             <p class="chef-block__title">ЗАКАЗЫ</p>
             <ul class="chef-block__order">
-                <li ng-repeat="table in vm.orderTable" class="chef-block__order__color">
-                    <ul>
-                        <li ng-repeat="dish in table.order">
+                <li ng-repeat="table in vm.orderTable" class="chef-block__order__color" ng-init="orderConfirmationAssept = []; orderConfirmationDecline = []">
+                    <ul ng-class="{'chef-block__border': varButtonPassive, 'chef-block__border-active': varButtonActive}">
+                        <li ng-repeat="dish in table.paramsOrder">
                             <div class="chef-block__order_first-string">
                                 <p class="chef-block__order__counter">{{vm.numberDish}}</p>
                                 <p>{{table.tableNumber}}</p>
@@ -14,16 +14,26 @@
                             <div class="chef-block__order__second-string">
                                 <p>{{dish.name}}</p>
                                 <div class="chef-block__order__second-string__confirmation">
-                                    <a ng-href="" class="chef-block__order__assept" ng-click="asseptOrder = !asseptOrder"></a>
-                                    <a ng-href="" class="chef-block__order__decline" ng-click="declineOrder = !declineOrder; dish.confirmDish = false"></a>
+                                    <a ng-href="" class="chef-block__order__assept" ng-click="asseptOrder = !asseptOrder; orderConfirmationAssept.push(1)"></a>
+                                    <a ng-href="" class="chef-block__order__decline" ng-click="declineOrder = !declineOrder; dish.confirmDish = false; orderConfirmationDecline.push(0)"></a>
                                     <div class="chef-block__order__assept-block" ng-show="asseptOrder"><span ng-click="declineOrderSecond = !declineOrderSecond">&#8285;</span></div>
                                     <div class="chef-block__order__decline-block" ng-show="declineOrder"><span ng-click="asseptOrderSecond = !asseptOrderSecond">&#8285;</span></div>
-                                    <div class="chef-block__order__assept-block sidebar" ng-show="asseptOrderSecond" ng-click="declineOrder = !declineOrder; asseptOrder = !asseptOrder; asseptOrderSecond = !asseptOrderSecond; dish.confirmDish = true"></div>
-                                    <div class="chef-block__order__decline-block sidebar" ng-show="declineOrderSecond" ng-click="asseptOrder = !asseptOrder; declineOrder = !declineOrder; declineOrderSecond = !declineOrderSecond; dish.confirmDish = false"></div>
+                                    <div class="chef-block__order__assept-block sidebar" ng-show="asseptOrderSecond" ng-click="declineOrder = !declineOrder; asseptOrder = !asseptOrder; asseptOrderSecond = !asseptOrderSecond; dish.confirmDish = true; orderConfirmationDecline.pop(); orderConfirmationAssept.push(1)"></div>
+                                    <div class="chef-block__order__decline-block sidebar" ng-show="declineOrderSecond" ng-click="asseptOrder = !asseptOrder; declineOrder = !declineOrder; declineOrderSecond = !declineOrderSecond; dish.confirmDish = false; orderConfirmationAssept.pop(); orderConfirmationDecline.push(0)"></div>
                                 </div>
                             </div>
                         </li>
                     </ul>
+                    <div class="chef-block__button">
+                        <div ng-if="orderConfirmationAssept.length > 0 && orderConfirmationDecline.length == 0 && orderConfirmationAssept.length < table.paramsOrder.length" ng-init="$parent.varButtonPassive=true">Отправить на кухню</div>
+                        <div ng-if="orderConfirmationDecline.length > 0 && (orderConfirmationDecline.length + orderConfirmationAssept.length) < table.paramsOrder.length" ng-init="$parent.varButtonPassive=true">Отправить клиенту</div>
+                    </div>
+                    <div class="chef-block__button active-confirm">
+                        <div ng-if="orderConfirmationDecline.length == 0 && orderConfirmationAssept.length == table.paramsOrder.length" ng-init="$parent.varButtonActive=true" ng-hide="hideButton" ng-click="$parent.confirmKitchen = !$parent.confirmKitchen; $parent.varButtonPassive=false; $parent.varButtonActive=false; hideButton = !hideButton">Отправить на кухню</div>
+                        <div ng-if="orderConfirmationDecline.length > 0 && (orderConfirmationDecline.length + orderConfirmationAssept.length) == table.paramsOrder.length" ng-init="$parent.varButtonActive=true" ng-hide="hideButton" ng-click="$parent.confirmClient = !$parent.confirmClient; $parent.varButtonPassive=false; $parent.varButtonActive=false; hideButton = !hideButton">Отправить клиенту</div>
+                    </div>
+                    <div class="client-confirmation" ng-show="confirmClient">Подтверждение от клиента</div>
+                    <div class="client-confirmation" ng-show="confirmKitchen">Отправлено на кухню</div>
                 </li>
             </ul>
         </div>
