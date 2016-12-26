@@ -1,0 +1,33 @@
+<div ng-class="fotoBackground"></div>
+<div class="foto-container" ng-class="myHeight">
+<div class="foto__block" ng-class="myTop">
+    <a href="" ng-click="vm.previousFoto(0)" class="previous-gallery"></a>
+    <div class="info-gallery">
+        <ul class="info-gallery__block">
+            <li ng-repeat="foto in vm.fotoGallery" class="info-gallery__block__slide">
+              <img ng-src="{{foto}}" alt="{{'cafe-image' + $index}}" ng-click="vm.openFoto($index); $parent.showPopup = !$parent.showPopup; $parent.myTop='topResize'; $parent.myHeight='heightResize'; $parent.fotoBackground='foto-back'"/>
+            </li>
+        </ul>
+    </div>
+    <div class="side-rectangle"></div>
+    <a href="" ng-click="vm.nextFoto(0)" class="next-gallery"></a>
+</div>
+    <div class="foto-popup__container">
+    <div class="foto-popup__block" id="carouselFoto" ng-show="showPopup">
+        <a href="" class="previousFoto" ng-click="vm.previousFoto(1)"></a>
+        <div class="foto-gallery__container">
+            <div class="foto-gallery">
+                <ul class="info-gallery__block-popup">
+                    <li ng-repeat="foto1 in vm.fotoGallery" class="info-gallery__block-popup__slide">
+                        <img ng-src="{{foto1}}" alt="{{'cafe-image' + $index}}"/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a href="" class="nextFoto" ng-click="vm.nextFoto(1)"></a>
+        <div class="closeFoto-link">
+            <a href="" ng-click="showPopup = !showPopup; myTop=''; myHeight=''; fotoBackground=''"></a>
+        </div>
+    </div>
+    </div>
+</div>
