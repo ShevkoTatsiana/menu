@@ -1,0 +1,10 @@
+<div class="description-block">
+    <div class="description-block__main">
+        <p ng-bind="vm.getDescription(vm.cafe.info)"></p>
+    </div>
+    <div class="description-block__side">
+        <p class="description-block__side__address">г.Минск,<br>{{vm.cafe.address}}</p>
+        <p class="description-block__side__time">Время работы:<br>
+        {{vm.cafe.workTime.start}} - {{vm.cafe.workTime.end}}</p>
+    </div>
+</div>

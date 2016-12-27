@@ -5,19 +5,19 @@ const controller = function () {
     this.blocks = [
         {
             title: 'Суши',
-            img: './img/home-sushi.jpg'
+            img: 'components/popular-item/img/home-sushi.jpg'
         },
         {
             title: 'Пицца',
-            img: './img/home-piza.jpg'
+            img: 'components/popular-item/img/home-piza.jpg'
         },
         {
             title: 'Бургеры',
-            img: './img/home-burger.jpg'
+            img: 'components/popular-item/img/home-burger.jpg'
         },
         {
             title: 'Стейки',
-            img: './img/home-meat.jpg'
+            img: 'components/popular-item/img/home-meat.jpg'
         }
     ];
 };
