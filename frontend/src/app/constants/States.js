@@ -3,5 +3,6 @@ export default {
     MAIN: 'main',
     RESULTS: 'results',
     DISHES: 'dishes',
-    INFO: 'info'
+    INFO: 'info',
+    CHEF: 'chef'
 };

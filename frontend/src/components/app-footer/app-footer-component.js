@@ -1,7 +1,8 @@
 import template from './app-footer.html';
 import './app-footer.less';
 
-const controller = function footerLink() {
+const $inject = ['$state', 'States'];
+const controller = function footerLink($state, States) {
     this.footerLinkServis = [
         {
             adress: '#',
@@ -52,7 +53,12 @@ const controller = function footerLink() {
             alt: 'pa'
         }
     ];
+    this.goToChef = () => {
+        $state.go(States.CHEF);
+    };
 };
+
+controller.$inject = $inject;
 
 export default {
     template,

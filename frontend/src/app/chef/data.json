@@ -1,0 +1,80 @@
+[{"id":1,
+  "tableNumber":"Стол 1",
+  "timeOfOrder":"9:30",
+  "order":[
+    { "name":"Закуска из сельди с картофелем",
+    "confirmDish":true
+    },
+    { "name":"Суп-пюре из брокколи",
+      "confirmDish":true
+    },
+    { "name":"Картофель-фри",
+      "confirmDish":true
+    }
+   ]},
+  {"id":2,
+    "tableNumber":"Стол 2",
+    "timeOfOrder":"9:30",
+    "order":[
+      { "name":"Закуска из сельди с картофелем",
+        "confirmDish":true
+      },
+      { "name":"Суп-пюре из брокколи",
+        "confirmDish":true
+      },
+      { "name":"Картофель-фри",
+        "confirmDish":true
+      }
+    ]},
+  {"id":3,
+    "tableNumber":"Стол 3",
+    "timeOfOrder":"9:30",
+    "order":[
+      { "name":"Закуска из сельди с картофелем",
+        "confirmDish":true
+      },
+      { "name":"Суп-пюре из брокколи",
+        "confirmDish":true
+      }
+    ]
+  },
+  {"id":4,
+    "tableNumber":"Стол 4",
+    "timeOfOrder":"9:30",
+    "order":[
+      { "name":"Закуска из сельди с картофелем",
+        "confirmDish":true
+      },
+      { "name":"Суп-пюре из брокколи",
+        "confirmDish":true
+      }
+    ]
+  },
+  {"id":5,
+    "tableNumber":"Стол 5",
+    "timeOfOrder":"9:30",
+    "order":[
+      { "name":"Закуска из сельди с картофелем",
+        "confirmDish":true
+      },
+      { "name":"Суп-пюре из брокколи",
+        "confirmDish":true
+      }
+    ]
+  },
+  {"id":6,
+    "tableNumber":"Стол 5",
+    "timeOfOrder":"9:30",
+    "order":[
+      { "name":"Закуска из сельди с картофелем",
+        "confirmDish":true
+      },
+      { "name":"Суп-пюре из брокколи",
+        "confirmDish":true
+      }
+    ]
+  }
+]
+
+
+
