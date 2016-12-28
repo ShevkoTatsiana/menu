@@ -9,7 +9,7 @@ const controller = function () {
     for (let i = 0; i < 16; i = i + 1) {
         items[i] = {
             title: `Акция № ${i + 1}`,
-            img: './img/home-coffee.jpg'
+            img: 'components/actions-slider/img/home-coffee.jpg'
         };
     }
     that.blocks = items;
