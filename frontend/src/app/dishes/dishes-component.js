@@ -4,14 +4,31 @@ import './dishes.less';
 const $inject = ['$stateParams', 'InfoFactory'];
 const controller = function ($stateParams, InfoFactory) {
     this.cafeIndex = $stateParams.cafe;
+    this.dishGroup = $stateParams.group;
+    if (this.dishGroup === '') {
+        InfoFactory.getInfo(this.cafeIndex)
+            .then(response => {
+                this.cafe = response.data;
+                document.getElementById('preloaderContainer').classList.add('ng-hide');
+            });
+        InfoFactory.getMenu(this.cafeIndex)
+            .then(response => {
+                this.menu = response.data;
+            });
+    } else {
+        const dishFilter = angular.fromJson(this.dishGroup);
 
-    InfoFactory.getInfo(this.cafeIndex)
-        .then(response => {
-            this.cafe = response.data;
-            document.getElementById('preloaderContainer').classList.add('ng-hide');
-        });
+        InfoFactory.getInfo(this.cafeIndex)
+            .then(response => {
+                this.cafe = response.data;
+                document.getElementById('preloaderContainer').classList.add('ng-hide');
+            });
+        InfoFactory.getMenu(this.cafeIndex, dishFilter)
+            .then(response => {
+                this.menu = response.data;
+            });
+    }
 
-/*    this.dishes = InfoFactory.getDish();*/
     const width = 625;
     const count = 1;
     const list = document.getElementsByClassName('dish-gallery')[0];
@@ -73,4 +90,3 @@ export default {
     controllerAs: 'vm',
     bindings: {}
 };
-

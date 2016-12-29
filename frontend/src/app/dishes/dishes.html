@@ -1,8 +1,11 @@
 <div class="info-container">
     <div class="info-container__module">
         <cafe-headline cafe="vm.cafe"></cafe-headline>
-        <div class="dish-container">
-            <dish-preview ng-repeat="dish in vm.cafe.paramsDishes" dish="dish" ng-click="vm.checkClassPopup()"></dish-preview>
+        <div class="info-container__module__block">
+            <dish-groups cafe="vm.cafe"></dish-groups>
+            <div class="dish-container">
+                <dish-preview ng-repeat="dish in vm.menu" dish="dish" ng-click="vm.checkClassPopup()"></dish-preview>
+            </div>
         </div>
     </div>
     <cafe-basket></cafe-basket>
@@ -12,7 +15,7 @@
         <a href="" class="arrow previous" ng-click="vm.previous()"></a>
         <div class="gallery__container">
             <div class="dish-gallery">
-                <dish-preview  ng-repeat="dish in vm.cafe.paramsDishes" dish="dish" class="dish-popup__inner"></dish-preview>
+                <dish-preview  ng-repeat="dish in vm.menu" dish="dish" class="dish-popup__inner"></dish-preview>
             </div>
         </div>
         <a href="" class="arrow next1" ng-click="vm.next()"></a>

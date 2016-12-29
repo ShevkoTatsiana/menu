@@ -11,6 +11,12 @@ const InfoFactory = function ($http) {
         },
         getDish() {
             return require('./data.json');
+        },
+        getMenu(id, category) {
+            const menu = Endpoints.fullMenu;
+            const adress = `${menu}${id}`;
+
+            return $http.get(adress, {params: {category}});
         }
     };
 };
