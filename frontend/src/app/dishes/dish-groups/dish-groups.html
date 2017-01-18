@@ -1,0 +1,6 @@
+<div class="dish-groups-block">
+  <p>Меню</p>
+  <ul><li ng-repeat="dish in vm.cafe.categories" ng-click="vm.searchGroup(dish)" ng-init="underline1 = vm.setClass(dish)" ng-class="{underline: underline1}">
+      {{dish}}
+  </li></ul>
+</div>

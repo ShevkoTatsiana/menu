@@ -1,0 +1,89 @@
+{
+  "parameters": [
+        {
+          "dishName": "Белорусская кухня",
+          "value": false,
+          "id": 1
+        },
+        {
+          "dishName": "Холодные закуски",
+          "value": false,
+          "id": 2
+        },
+        {
+          "dishName": "Салаты",
+          "value": false,
+          "id": 3
+        },
+        {
+          "dishName": "Супы",
+          "value": false,
+          "id": 4
+        },
+        {
+          "dishName": "Горячие закуски",
+          "value": false,
+          "id": 5
+        },
+        {
+          "dishName": "Паста и ризотто",
+          "value": false,
+          "id": 6
+        },
+        {
+          "dishName": "Бургеры",
+          "value": false,
+          "id": 7
+        },
+        {
+          "dishName": "Горячие блюда",
+          "value": false,
+          "id": 8
+        },
+        {
+          "dishName": "Гарниры",
+          "value": false,
+          "id": 9
+        },
+        {
+          "dishName": "Десерты",
+          "value": false,
+          "id": 10
+        },
+        {
+          "dishName": "Тартилья",
+          "value": false,
+          "id": 11
+        },
+        {
+          "dishName": "Чай и чайные напитки",
+          "value": false,
+          "id": 12
+        },
+        {
+          "dishName": "Кофе",
+          "value": false,
+          "id": 13
+        },
+        {
+          "dishName": "Минеральная вода, напитки, соки и нектары",
+          "value": false,
+          "id": 14
+        },
+        {
+          "dishName": "Шоколад",
+          "value": false,
+          "id": 15
+        },
+        {
+          "dishName": "Фреши",
+          "value": false,
+          "id": 16
+        },
+        {
+          "dishName": "Безалкогольные коктейли",
+          "value": false,
+          "id": 17
+        }
+  ]
+}

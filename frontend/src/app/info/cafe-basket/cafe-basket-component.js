@@ -1,9 +1,10 @@
 import template from './cafe-basket.html';
 import './cafe-basket.less';
 
-const $inject = ['$rootScope', 'dishService'];
-const controller = function ($rootScope, dishService) {
+const $inject = ['$rootScope', 'dishService', '$stateParams'];
+const controller = function ($rootScope, dishService, $stateParams) {
     const that = this;
+    that.dishGroup = $stateParams.group;
 
     that.sum = 0;
     that.orderList = dishService.getOrder();
@@ -28,12 +29,15 @@ const controller = function ($rootScope, dishService) {
     });
 
     $rootScope.$on('$locationChangeSuccess', function (event, newUrl, oldUrl) {
-        if (/dishes/.test(newUrl) === true && /info/.test(oldUrl) === true) {
+       if (/dishes/.test(newUrl) === true && /info/.test(oldUrl) === true) {
             destroyMyEvent();
-        } else if (/dishes/.test(oldUrl) === true && /info/.test(newUrl) === true) {
+       } else if (/dishes/.test(oldUrl) === true && /info/.test(newUrl) === true) {
             destroyMyEvent();
-        }
+       } else if (/dishes\/\d\/\S+/.test(oldUrl) === true && /dishes\/\d\/$/.test(newUrl) === true) {
+            destroyMyEvent();
+       }
     });
+
     that.plusOne = function (index) {
         that.orderList[index].number = that.orderList[index].number + 1;
         that.sum = that.sum + that.orderList[index].price;
