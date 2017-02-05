@@ -7,16 +7,21 @@ const controller = function ($stateParams, ResultsFactory, dishService) {
     this.search = $stateParams.search;
     this.filter = $stateParams.filter;
     this.filterParams = [];
-
     if (this.filter === '') {
-        ResultsFactory.restaurants(this.search, 0, 10, 'name')
+        if (this.search !== '') {
+            this.restName = this.search;
+        }
+
+    /*    ResultsFactory.restaurants(this.search, 0, 10, 'name')
             .then(response => {
                 this.cafes = response.data;
-                if (this.cafes.length === 0) {
-                    document.getElementsByClassName('results-container__not-found')[0].classList.remove('ng-hide');
-                }
                 document.getElementById('preloaderContainer').classList.add('ng-hide');
             });
+        if (angular.isUndefined(this.cafes)) {*/
+            this.cafes = ResultsFactory.restaurantsData();
+            document.getElementById('preloaderContainer').classList.add('ng-hide');
+
+     //   };
     } else {
         const filterArray = angular.fromJson(this.filter).parametrses;
         const paramsObject = {};
@@ -35,13 +40,23 @@ const controller = function ($stateParams, ResultsFactory, dishService) {
                 paramsObject[requestType[i]] = group.join(',');
             }
         }
-        ResultsFactory.customRestaurantsFilter(paramsObject)
+     /*   ResultsFactory.customRestaurantsFilter(paramsObject)
             .then(response => {
                 this.cafes = response.data;
                 document.getElementById('preloaderContainer').classList.add('ng-hide');
-            });
+            });*/
+        this.restKitchen = paramsObject.kitchen;
+        this.restCategory = paramsObject.dishes;
+        this.restClass = paramsObject.clazz;
+        this.restType = paramsObject.type;
+        this.containsComparator = function (expected, actual) {
+            return actual.indexOf(expected) > -1;
+        };
+        this.cafes = ResultsFactory.restaurantsData();
+        document.getElementById('preloaderContainer').classList.add('ng-hide');
     }
     dishService.setOrder([]);
+    dishService.clearOrderEvent();
 };
 
 controller.$inject = $inject;

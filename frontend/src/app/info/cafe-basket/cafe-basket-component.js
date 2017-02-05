@@ -4,9 +4,11 @@ import './cafe-basket.less';
 const $inject = ['$rootScope', 'dishService', '$stateParams'];
 const controller = function ($rootScope, dishService, $stateParams) {
     const that = this;
-    that.dishGroup = $stateParams.group;
 
+    that.dishGroup = $stateParams.group;
+    that.flagEvent = dishService.getOrderEvent();
     that.sum = 0;
+
     that.orderList = dishService.getOrder();
     if (that.orderList.length > 0) {
         for (let i = 0; i < that.orderList.length; i = i + 1) {
@@ -18,25 +20,21 @@ const controller = function ($rootScope, dishService, $stateParams) {
             document.getElementsByClassName('cafe-basket__button')[0].classList.add('basket-active');
         }
     }
-
-    const destroyMyEvent = $rootScope.$on('myevent', function (event, data) {
-        that.orderList.push(data);
-        that.sum = that.sum + parseInt(data.number, 10) * parseFloat(data.price);
-        dishService.setOrder(that.orderList);
-        if (document.getElementsByClassName('cafe-basket__button')[0].classList.contains('basket-active') === false) {
-            document.getElementsByClassName('cafe-basket__button')[0].classList.add('basket-active');
-        }
-    });
-
-    $rootScope.$on('$locationChangeSuccess', function (event, newUrl, oldUrl) {
-       if (/dishes/.test(newUrl) === true && /info/.test(oldUrl) === true) {
-            destroyMyEvent();
-       } else if (/dishes/.test(oldUrl) === true && /info/.test(newUrl) === true) {
-            destroyMyEvent();
-       } else if (/dishes\/\d\/\S+/.test(oldUrl) === true && /dishes\/\d\/$/.test(newUrl) === true) {
-            destroyMyEvent();
-       }
-    });
+    if (that.flagEvent) {
+        that.destroyMyEvent = $rootScope.$on('myevent', function (event, data) {
+            that.orderList.push(data);
+            that.sum = that.sum + parseInt(data.number, 10) * parseFloat(data.price);
+            dishService.setOrder(that.orderList);
+            if (document.getElementsByClassName('cafe-basket__button')[0].classList.contains('basket-active') === false) {
+                document.getElementsByClassName('cafe-basket__button')[0].classList.add('basket-active');
+            }
+        });
+        dishService.setOrderEvent();
+    } else {
+        that.destroyMyEvent = $rootScope.$on('myevent', function (event, data) {
+            that.sum = that.sum + parseInt(data.number, 10) * parseFloat(data.price);
+        });
+    }
 
     that.plusOne = function (index) {
         that.orderList[index].number = that.orderList[index].number + 1;

@@ -15,6 +15,9 @@ const ResultsFactory = function ($http) {
             const rating = params.rating;
 
             return $http.get(Endpoints.filter, {params: {kitchen, category, clazz, type, others, rating}});
+        },
+        restaurantsData() {
+            return require('./data.json');
         }
     };
 };

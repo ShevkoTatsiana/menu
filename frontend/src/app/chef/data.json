@@ -1,7 +1,7 @@
 [{"id":1,
-  "tableNumber":"Стол 1",
+  "tableNumber":"1",
   "timeOfOrder":"9:30",
-  "order":[
+  "paramsOrder":[
     { "name":"Закуска из сельди с картофелем",
     "confirmDish":true
     },
@@ -13,68 +13,65 @@
     }
    ]},
   {"id":2,
-    "tableNumber":"Стол 2",
-    "timeOfOrder":"9:30",
-    "order":[
-      { "name":"Закуска из сельди с картофелем",
+    "tableNumber":"2",
+    "timeOfOrder":"9:35",
+    "paramsOrder":[
+      { "name":"Пицца Маргарита",
         "confirmDish":true
       },
-      { "name":"Суп-пюре из брокколи",
+      { "name":"Суп-пюре из креветок",
         "confirmDish":true
       },
-      { "name":"Картофель-фри",
+      { "name":"Салат Цезарь",
         "confirmDish":true
       }
     ]},
   {"id":3,
-    "tableNumber":"Стол 3",
-    "timeOfOrder":"9:30",
-    "order":[
-      { "name":"Закуска из сельди с картофелем",
+    "tableNumber":"3",
+    "timeOfOrder":"9:40",
+    "paramsOrder":[
+      { "name":"Ванильный латте",
         "confirmDish":true
       },
-      { "name":"Суп-пюре из брокколи",
+      { "name":"Чизкейк",
         "confirmDish":true
       }
     ]
   },
   {"id":4,
-    "tableNumber":"Стол 4",
-    "timeOfOrder":"9:30",
-    "order":[
-      { "name":"Закуска из сельди с картофелем",
+    "tableNumber":"4",
+    "timeOfOrder":"9:42",
+    "paramsOrder":[
+      { "name":"Салат из свежих овощей",
         "confirmDish":true
       },
-      { "name":"Суп-пюре из брокколи",
+      { "name":"Шашлык",
         "confirmDish":true
       }
     ]
   },
   {"id":5,
-    "tableNumber":"Стол 5",
-    "timeOfOrder":"9:30",
-    "order":[
-      { "name":"Закуска из сельди с картофелем",
+    "tableNumber":"5",
+    "timeOfOrder":"10:10",
+    "paramsOrder":[
+      { "name":"Драники",
         "confirmDish":true
       },
-      { "name":"Суп-пюре из брокколи",
+      { "name":"Морс из клюквы",
         "confirmDish":true
       }
     ]
   },
   {"id":6,
-    "tableNumber":"Стол 5",
-    "timeOfOrder":"9:30",
-    "order":[
-      { "name":"Закуска из сельди с картофелем",
+    "tableNumber":"6",
+    "timeOfOrder":"10:15",
+    "paramsOrder":[
+      { "name":"Картофельное пюре",
         "confirmDish":true
       },
-      { "name":"Суп-пюре из брокколи",
+      { "name":"Шницель по-венски",
         "confirmDish":true
       }
     ]
   }
 ]
-
-
-

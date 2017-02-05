@@ -1,17 +1,23 @@
 import template from './dishes.html';
 import './dishes.less';
 
-const $inject = ['$stateParams', 'InfoFactory'];
-const controller = function ($stateParams, InfoFactory) {
+const $inject = ['$stateParams', 'InfoFactory', 'ResultsFactory'];
+const controller = function ($stateParams, InfoFactory, ResultsFactory) {
     this.cafeIndex = $stateParams.cafe;
     this.dishGroup = $stateParams.group;
-    if (this.dishGroup === '') {
+    if (this.dishGroup !== '') {
+        this.dishFilter = angular.fromJson(this.dishGroup);
+    }
+    const cafes = ResultsFactory.restaurantsData();
+    this.cafe = cafes[this.cafeIndex - 1];
+    this.menu = InfoFactory.getDish();
+  /*  if (this.dishGroup === '') {
         InfoFactory.getInfo(this.cafeIndex)
             .then(response => {
                 this.cafe = response.data;
                 document.getElementById('preloaderContainer').classList.add('ng-hide');
-            });
-        InfoFactory.getMenu(this.cafeIndex)
+            });*/
+       /* InfoFactory.getMenu(this.cafeIndex)
             .then(response => {
                 this.menu = response.data;
             });
@@ -27,7 +33,7 @@ const controller = function ($stateParams, InfoFactory) {
             .then(response => {
                 this.menu = response.data;
             });
-    }
+    }*/
 
     const width = 625;
     const count = 1;

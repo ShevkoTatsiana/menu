@@ -3,7 +3,8 @@ import './dish-preview.less';
 
 const $inject = ['$rootScope'];
 const controller = function ($rootScope) {
-    this.serverUrl = 'http://178.124.206.44';
+    //this.serverUrl = 'http://178.124.206.44';
+    this.serverUrl = '';
     this.number = 1;
 
     this.plus = function () {

@@ -1,5 +1,6 @@
 const dishService = function () {
     let orderObject = [];
+    let orderEvent = true;
 
     return {
         getOrder() {
@@ -7,6 +8,15 @@ const dishService = function () {
         },
         setOrder(order) {
             orderObject = order;
+        },
+        getOrderEvent() {
+            return orderEvent;
+        },
+        setOrderEvent() {
+            orderEvent = false;
+        },
+        clearOrderEvent() {
+            orderEvent = true;
         }
     };
 };

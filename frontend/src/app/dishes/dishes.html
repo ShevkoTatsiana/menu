@@ -4,7 +4,17 @@
         <div class="info-container__module__block">
             <dish-groups cafe="vm.cafe"></dish-groups>
             <div class="dish-container">
-                <dish-preview ng-repeat="dish in vm.menu" dish="dish" ng-click="vm.checkClassPopup()"></dish-preview>
+                <div class="dish-container__sorting">
+                    <label for="sortMenu">Сортировать</label>
+                    <select id="sortMenu"  ng-model="sortParam" ng-init="reverse=false">
+                        <option value="likke" ng-click="reverse=false">по рейтингу</option>
+                        <option value="price" ng-click="reverse=false">сначала дешевые</option>
+                        <option value="price" ng-click="reverse=true">сначала дорогие</option>
+                        <option value="name" ng-click="reverse=false">А &rarr; Я</option>
+                        <option value="name" ng-click="reverse=true">Я &rarr; А</option>
+                    </select>
+                </div>
+                <dish-preview ng-repeat="dish in vm.menu | filter:{category:vm.dishFilter} | orderBy:sortParam:reverse" dish="dish" ng-click="vm.checkClassPopup()"></dish-preview>
             </div>
         </div>
     </div>

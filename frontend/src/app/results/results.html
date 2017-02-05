@@ -4,8 +4,13 @@
 <div class="mainPart">
 	<filter-buttons></filter-buttons>
     <div class="results-container">
-	    <cafe-preview ng-repeat="cafe in vm.cafes" cafe="cafe"></cafe-preview>
-        <div class="results-container__not-found ng-hide">
+
+	    <cafe-preview ng-repeat="cafe in vm.cafes | filter:{kitchen:vm.restKitchen}:vm.containsComparator |
+	    filter:{category:vm.restCategory}:vm.containsComparator |
+	    filter:{classOfRestaurant:vm.restClass} |
+	    filter:{type:vm.restType}:vm.containsComparator | filter:{name:vm.restName}" cafe="cafe"
+                      ng-init="$parent.ShowResults=true"></cafe-preview>
+        <div class="results-container__not-found" ng-hide="ShowResults">
             По Вашему запросу ничего не найдено
         </div>
     </div>

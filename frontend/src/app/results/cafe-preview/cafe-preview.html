@@ -1,6 +1,8 @@
 <div class="detail">
     <div class="logoCafe">
-        <img ng-src="{{vm.serverUrl + vm.cafe.images[0].url}}" alt="logo-cafe" />
+        <div class="logoCafe_image">
+            <img ng-src="{{vm.serverUrl + vm.cafe.images[0].url}}" alt="logo-cafe" />
+        </div>
         <p class="logoCafe__purse">{{vm.cafe.classOfRestaurant}}</p>
         <p class="logoCafe__timeWork" ng-bind="vm.openStatus(vm.cafe.workTime)"></p>
     </div>

@@ -20,9 +20,11 @@
         <p class="dish-info__weight">{{vm.dish.weight}}</p>
         <p class="dish-info__discription">{{vm.dish.description}}</p>
         <div class="dish-info__order">
+            <div>
             <label for="inputOrder" ng-click="vm.plus()">+</label>
             <input type="text" id="inputOrder" ng-model="vm.number">
             <label for="inputOrder" ng-click="vm.minus()">-</label>
+            </div>
             <p class="dish-info__order__sum">{{vm.dish.price}}</p>
         </div>
         <a ng-href="" class="dish-info__button greenButton" ng-click="vm.emitEvent()">Заказать</a>

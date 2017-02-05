@@ -8,6 +8,10 @@ const controller = function (PopupFactory, $state, States) {
         .then(response => {
             this.filters = response.data;
         });
+
+    if (angular.isUndefined(this.filters)) {
+        this.filters = PopupFactory.getFiltersData();
+    }
     this.searchFilter = filters => {
         const filter = angular.toJson(filters);
 

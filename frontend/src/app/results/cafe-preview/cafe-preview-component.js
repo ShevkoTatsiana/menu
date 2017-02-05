@@ -3,8 +3,8 @@ import './cafe-preview.less';
 
 const $inject = ['$state', 'States'];
 const controller = function ($state, States) {
-    this.serverUrl = 'http://178.124.206.44';
-
+    //this.serverUrl = 'http://178.124.206.44';
+    this.serverUrl = '';
     this.openStatus = function (time) {
         if (angular.isUndefined(time)) {
             return 'Неизвестно';

@@ -20,12 +20,17 @@ p {
 .logoCafe-block{
   width: 108px;
   height: 108px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-right: 12px;
   border: 1px solid @m-grey-1;
 
   img {
     width: 100%;
-    vertical-align: middle;
   }
 }
 

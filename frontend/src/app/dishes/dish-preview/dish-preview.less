@@ -11,7 +11,7 @@ dish-preview {
   display: -ms-flexbox;
   display: flex;
   margin: 40px 30px 0 15px;
-  width: 745px;
+  width: 100%;
   font-family: sans-serif;
 }
 
@@ -32,8 +32,8 @@ dish-preview {
 }
 
 .dish-image__rating {
-  display: -webkit-box;
-  display: -webkit-flexbox;
+  display:  -ms-flexbox;;
+  display: flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,6 +46,7 @@ dish-preview {
 }
 
 .dish-info {
+  width: inherit;
   margin-left: 12px;
 }
 
@@ -54,8 +55,8 @@ dish-preview {
 }
 
 .dish-image__like {
-  display: -webkit-box;
-  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,8 +76,8 @@ dish-preview {
 }
 
 .dish-image__dislike {
-  display: -webkit-box;
-  display: -webkit-flexbox;
+  display:  -ms-flexbox;
+  display: flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,8 +118,16 @@ dish-preview {
   display: flex;
   -ms-flex-align: baseline;
   align-items: baseline;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 12px;
+
+  div {
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
+
 #inputOrder {
   width: 32px;
   height: 18px;
@@ -136,7 +145,6 @@ dish-preview {
 
   &:after {
     content: 'шт';
-    margin-right: 23px;
     margin-left: 5px;
     color: rgb( 77, 77, 77 );
     font-size: 14px;
@@ -154,7 +162,6 @@ dish-preview {
 
 .dish-info__order__sum {
   display: inline-block;
-  margin-left: 20px;
   color: rgb( 77, 77, 77 );
   font: 18px normal;
 

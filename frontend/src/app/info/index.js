@@ -6,4 +6,5 @@ export default angular.module('info', [
 ])
     .component('info', require('./info-component'))
     .factory('InfoFactory', require('./info-factory'))
+    .factory('ResultsFactory', require('../results/results-factory'))
     .name;

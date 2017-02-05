@@ -10,6 +10,9 @@ const controller = function (PopupFactory, $state, States, $stateParams) {
             .then(response => {
                 this.filters = response.data;
             });
+        if (angular.isUndefined(this.filters)) {
+            this.filters = PopupFactory.getFiltersData()
+        };
     } else {
         this.filters = angular.fromJson(this.filter);
     }

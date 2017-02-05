@@ -4,7 +4,8 @@ import './cafe-headline.less';
 const $inject = ['$state', 'States'];
 const controller = function ($state, States) {
     this.logoImg = '';
-    this.serverUrl = 'http://178.124.206.44';
+    //this.serverUrl = 'http://178.124.206.44';
+    this.serverUrl = '';
     document.getElementById('preloaderContainer').classList.add('ng-hide');
 
     this.openStatus = function (time) {

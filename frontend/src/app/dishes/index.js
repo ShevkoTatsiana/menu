@@ -6,4 +6,5 @@ export default angular.module('dishes', [
 ])
     .component('dishes', require('./dishes-component'))
     .factory('InfoFactory', require('../info/info-factory'))
+    .factory('ResultsFactory', require('../results/results-factory'))
     .name;

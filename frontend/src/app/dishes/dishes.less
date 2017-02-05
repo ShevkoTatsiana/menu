@@ -11,12 +11,13 @@
   }
 
   .dish-container {
+    width: 80%;
     border-left: 1px solid @m-grey-1;
   }
 }
 
 dish-groups {
-  width: 25%;
+  width: 20%;
 }
 
 .info-container__module__block {
@@ -134,5 +135,21 @@ dish-groups {
       width: 16px;
       height: 16px;
     }
+  }
+}
+
+.dish-container__sorting {
+  height: 25px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -ms-flex-align: center;
+  align-items: center;
+  color: @m-middle-gray;
+  background-color: @m-light-light-gray;
+
+  select {
+    margin: 0 10px;
   }
 }

@@ -3,7 +3,7 @@
   "name" : "Суши WOK",
   "address" : "пр-т Независимости, 19",
   "type" : "Кафе",
-  "rating" : "$$",
+  "classOfRestaurant" : "$$",
   "lunchMenu" : true,
   "canReservation" : true,
   "canTakeAway" : true,
@@ -12,16 +12,21 @@
     "start" : "11.00",
     "end" : "24.00"
   },
-  "images" : null,
-  "category" : [ "Суши", "китайская еда" ],
-  "kitchen" : [ "Японская", "китайская" ]
+  "images" : [{
+    "url": "app/results/img/cafe_1.jpg"
+  }],
+  "category" : [ "Суши", "Китайская еда" ],
+  "kitchen" : [ "Японская", "Китайская" ],
+  "distanceToUser": "2.8",
+  "rating": 2,
+  "numberOfReviews": 11
 },
   {
     "id" : 2,
     "name" : "Белорусская кухня",
     "address" : "ул. Немига, 17",
     "type" : "Кафе",
-    "rating" : "$$",
+    "classOfRestaurant" : "$$",
     "lunchMenu" : true,
     "canReservation" : true,
     "canTakeAway" : true,
@@ -30,16 +35,21 @@
       "start" : "10.00",
       "end" : "24.00"
     },
-    "images" : null,
+    "images" : [{
+      "url": "app/results/img/cafe_2.jpg"
+    }],
     "category" : [ "Колбаски" ],
-    "kitchen" : [ "Белорусская", "русская", "украинская" ]
+    "kitchen" : [ "Белорусская", "Русская", "Украинская" ],
+    "distanceToUser": "6.4",
+    "rating": 4,
+    "numberOfReviews": 5
   },
   {
     "id" : 3,
     "name" : "Sushi",
     "address" : "пр-т Независимости, 78",
     "type" : "Кафе",
-    "rating" : "$$",
+    "classOfRestaurant" : "$$",
     "lunchMenu" : true,
     "canReservation" : true,
     "canTakeAway" : true,
@@ -48,16 +58,21 @@
       "start" : "10.00",
       "end" : "24.00"
     },
-    "images" : null,
+    "images" : [{
+      "url": "app/results/img/cafe_3.jpg"
+    }],
     "category" : [ "Суши" ],
-    "kitchen" : [ "Японская" ]
+    "kitchen" : [ "Японская" ],
+    "distanceToUser": "0.9",
+    "rating": 3,
+    "numberOfReviews": 19
   },
   {
     "id" : 4,
-    "name" : "Белорусская кухня",
+    "name" : "Pizza",
     "address" : "пр-т Независимости, 78",
     "type" : "Кафе",
-    "rating" : "$$",
+    "classOfRestaurant" : "$$",
     "lunchMenu" : false,
     "canReservation" : true,
     "canTakeAway" : true,
@@ -66,16 +81,21 @@
       "start" : "10.00",
       "end" : "24.00"
     },
-    "images" : null,
+    "images" : [{
+      "url": "app/results/img/cafe_4.jpg"
+    }],
     "category" : [ "Пицца", "Десерты" ],
-    "kitchen" : [ "Европейская", "итальянская" ]
+    "kitchen" : [ "Европейская", "Итальянская" ],
+    "distanceToUser": "4.5",
+    "rating": 5,
+    "numberOfReviews": 11
   },
   {
     "id" : 5,
     "name" : "Gondola",
     "address" : "ул. Интернациональная, 21",
     "type" : "Ресторан",
-    "rating" : "$$$",
+    "classOfRestaurant" : "$$$",
     "lunchMenu" : false,
     "canReservation" : true,
     "canTakeAway" : true,
@@ -84,16 +104,21 @@
       "start" : "10.00",
       "end" : "24.00"
     },
-    "images" : null,
+    "images" : [{
+      "url": "app/results/img/cafe_5.jpg"
+    }],
     "category" : [ "Суши", "Пицца", "Стейки", "Десерты" ],
-    "kitchen" : [ "Японская", "итальянская", "европейская" ]
+    "kitchen" : [ "Японская", "Итальянская", "Европейская" ],
+    "distanceToUser": "5.7",
+    "rating": 5,
+    "numberOfReviews": 8
   },
   {
     "id" : 6,
     "name" : "Chinese",
     "address" : "пр-т Независимости, 72",
     "type" : "Ресторан",
-    "rating" : "$$",
+    "classOfRestaurant" : "$$",
     "lunchMenu" : true,
     "canReservation" : false,
     "canTakeAway" : true,
@@ -102,16 +127,21 @@
       "start" : "10.00",
       "end" : "23.00"
     },
-    "images" : null,
+    "images" : [{
+      "url": "app/results/img/cafe_6.jpg"
+    }],
     "category" : [ "Китайская еда" ],
-    "kitchen" : [ "Китайская" ]
+    "kitchen" : [ "Китайская" ],
+    "distanceToUser": "4.1",
+    "rating": 4,
+    "numberOfReviews": 22
   },
   {
     "id" : 7,
     "name" : "Аджарский дом",
     "address" : "пр-т Независимости, 19",
     "type" : "Кафе",
-    "rating" : "$$",
+    "classOfRestaurant" : "$$",
     "lunchMenu" : false,
     "canReservation" : true,
     "canTakeAway" : true,
@@ -120,16 +150,21 @@
       "start" : "12.00",
       "end" : "23.00"
     },
-    "images" : null,
+    "images" : [{
+      "url": "app/results/img/cafe_7.jpg"
+    }],
     "category" : null,
-    "kitchen" : [ "Грузинская" ]
+    "kitchen" : [ "Грузинская" ],
+    "distanceToUser": "3.7",
+    "rating": 2,
+    "numberOfReviews": 4
   },
   {
     "id" : 8,
     "name" :"Burger week",
     "address" : "пр-т Независимости, 19",
     "type" : "Кафе",
-    "rating" : "$",
+    "classOfRestaurant" : "$",
     "lunchMenu" : true,
     "canReservation" : true,
     "canTakeAway" : true,
@@ -138,16 +173,21 @@
       "start" : "12.00",
       "end" : "02.00"
     },
-    "images" : null,
+    "images" : [{
+      "url": "app/results/img/cafe_8.jpg"
+    }],
     "category" : [ "Бургеры", "Сэндвичи", "Десерты" ],
-    "kitchen" : [ "Американская", "Европейская" ]
+    "kitchen" : [ "Американская", "Европейская" ],
+    "distanceToUser": "3.5",
+    "rating": 3,
+    "numberOfReviews": 12
   },
   {
     "id" : 9,
     "name" : "Тадж Махал",
     "address" : "ул. Романовская слобода, 26",
     "type" : "Ресторан",
-    "rating" : "$$$;",
+    "classOfRestaurant" : "$$$;",
     "lunchMenu" : false,
     "canReservation" : true,
     "canTakeAway" : true,
@@ -156,16 +196,21 @@
       "start" : "12.00",
       "end" : "02.00"
     },
-    "images" : null,
+    "images" : [{
+      "url": "app/results/img/cafe_9.jpg"
+    }],
     "category" : [ "Десерты" ],
-    "kitchen" : [ "Индийская", "азиатская" ]
+    "kitchen" : [ "Индийская", "Азиатская" ],
+    "distanceToUser": "2.2",
+    "rating": 5,
+    "numberOfReviews": 9
   },
   {
     "id" : 10,
     "name" : "O'connors",
     "address" : "пер.Войсковой, 14",
     "type" : "Паб",
-    "rating" : "$$",
+    "classOfRestaurant" : "$$",
     "lunchMenu" : true,
     "canReservation" : true,
     "canTakeAway" : true,
@@ -174,16 +219,21 @@
       "start" : "12.00",
       "end" : "02.00"
     },
-    "images" : null,
-    "category" : [ "Бургеры", "стейки", "колбвски" ],
-    "kitchen" : [ "Американская", "европейская" ]
+    "images" : [{
+      "url": "app/results/img/cafe_10.jpg"
+    }],
+    "category" : [ "Бургеры", "Стейки", "Колбаски" ],
+    "kitchen" : [ "Американская", "Европейская" ],
+    "distanceToUser": "0.9",
+    "rating": 4,
+    "numberOfReviews": 1
   },
   {
     "id" : 11,
     "name" : "Вкусные пироги",
     "address" : "ул. Раковская, 23",
     "type" : "Кафе",
-    "rating" : "$$",
+    "classOfRestaurant" : "$$",
     "lunchMenu" : false,
     "canReservation" : true,
     "canTakeAway" : true,
@@ -192,16 +242,21 @@
       "start" : "12.00",
       "end" : "23.00"
     },
-    "images" : null,
+    "images" : [{
+      "url": "app/results/img/cafe_11.jpg"
+    }],
     "category" : [ "Пироги", "Десерты" ],
-    "kitchen" : [ "Европейская" ]
+    "kitchen" : [ "Европейская" ],
+    "distanceToUser": "1.6",
+    "rating": 3,
+    "numberOfReviews": 17
   },
   {
     "id" : 12,
     "name" : "Union cafe",
     "address" : "пр-т Независимости, 18",
     "type" : "Кафе",
-    "rating" : "$$",
+    "classOfRestaurant" : "$$",
     "lunchMenu" : true,
     "canReservation" : true,
     "canTakeAway" : true,
@@ -210,8 +265,13 @@
       "start" : "12.00",
       "end" : "24.00"
     },
-    "images" : null,
-    "category" : [ "Стейки", "пироги", "десерты", "сэндвичи" ],
-    "kitchen" : [ "Европейская" ]
+    "images" : [{
+      "url": "app/results/img/cafe_12.jpg"
+    }],
+    "category" : [ "Стейки", "Пироги", "Десерты", "Сэндвичи" ],
+    "kitchen" : [ "Европейская" ],
+    "distanceToUser": "1.2",
+    "rating": 4,
+    "numberOfReviews": 6
   }
 ]

@@ -4,9 +4,20 @@ import './dish-groups.less';
 const $inject = ['$state', 'States', '$stateParams'];
 
 const controller = function ($state, States, $stateParams) {
+    if (angular.isUndefined(this.cafe.categories)) {
+        this.cafe.categories = ['Горячее', 'Суп', 'Роллы', 'Запеченные роллы', 'Готовые WOK', 'Драники', 'Салаты',
+            'Суши', 'Сашими', 'Сеты', 'Десерты'];
+    }
     this.group = $stateParams.group;
     this.setClass = function (param) {
-        return angular.fromJson(this.group) === param;
+        let newParam;
+
+        if (this.group !== '') {
+            newParam = angular.fromJson(this.group);
+        } else {
+            newParam = '';
+        }
+        return newParam === param;
     };
     this.searchGroup = checkedGroup => {
         const group = angular.toJson(checkedGroup);
@@ -26,3 +37,4 @@ export default {
         cafe: '<'
     }
 };
+

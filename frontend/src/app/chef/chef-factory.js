@@ -6,6 +6,9 @@ const ChefFactory = function ($http) {
     return {
         getOrder() {
             return $http.get(Endpoints.order);
+        },
+        getOrderData() {
+            return require('./data.json');
         }
     };
 };

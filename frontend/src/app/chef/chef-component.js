@@ -8,6 +8,10 @@ const controller = function (ChefFactory) {
         .then(response => {
             this.orderTable = response.data;
         });
+
+    if (angular.isUndefined(this.orderTable)) {
+        this.orderTable = ChefFactory.getOrderData();
+    }
     document.getElementById('preloaderContainer').classList.add('ng-hide');
 };
 
