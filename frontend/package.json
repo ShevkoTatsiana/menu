@@ -12,7 +12,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.it-academy.by:menu-project/menu-web.git"
+   // "url": "git@git.it-academy.by:menu-project/menu-web.git"
+    "url": "https://github.com/ShevkoTatsiana/menu.git"
   },
   "keywords": [
     "cafe",
